@@ -26,7 +26,7 @@
 
     <BclHasOobImpls>false</BclHasOobImpls>
     <BclHasOobImpls Condition="('$(MMTFKind)' == '.NETStandard' and $([MSBuild]::VersionGreaterThanOrEquals('$(MMTFVersion)','2.1')))
-                    or ('$(MMTFKind)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals('$(MMTFVersion)','2.1')))">true</BclHasOobImpls>
+            or ('$(MMTFKind)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals('$(MMTFVersion)','3.0')))">true</BclHasOobImpls>
   </PropertyGroup>
 
   <ItemGroup>
@@ -62,8 +62,12 @@
 
   <!-- Include attribute stubs only when the BCL does not provide them (older TFMs).
        Remove the SDK default Compile item first to avoid duplicate-inclusion errors. -->
-  <ItemGroup Condition="'$(BclHasOobImpls)' != 'true'">
+  <!-- Always remove the SDK implicit compile so we can conditionally add the file. -->
+  <ItemGroup>
     <Compile Remove="System/Diagnostics/CodeAnalysis/NullableAttributes.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(BclHasOobImpls)' != 'true'">
     <Compile Include="System/Diagnostics/CodeAnalysis/NullableAttributes.cs" />
   </ItemGroup>
 

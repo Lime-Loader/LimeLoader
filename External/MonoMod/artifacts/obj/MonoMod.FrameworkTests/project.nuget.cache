@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Scfn2Iv0L2Q=",
+  "dgSpecHash": "GrcX9vhhMCc=",
   "success": true,
   "projectFilePath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.FrameworkTests/MonoMod.FrameworkTests.csproj",
   "expectedPackageFiles": [
@@ -110,6 +110,7 @@
     "/home/blckout/.nuget/packages/xunit.core/2.4.2/xunit.core.2.4.2.nupkg.sha512",
     "/home/blckout/.nuget/packages/xunit.extensibility.core/2.4.2/xunit.extensibility.core.2.4.2.nupkg.sha512",
     "/home/blckout/.nuget/packages/xunit.extensibility.execution/2.4.2/xunit.extensibility.execution.2.4.2.nupkg.sha512",
+    "/home/blckout/.nuget/packages/iced/1.21.0/iced.1.21.0.nupkg.sha512",
     "/home/blckout/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
     "/home/blckout/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
     "/home/blckout/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.36/microsoft.netcore.app.host.linux-x64.6.0.36.nupkg.sha512",
@@ -127,8 +128,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.TestPlatform.TestHost 17.3.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.FrameworkTests/MonoMod.FrameworkTests.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.FrameworkTests/MonoMod.FrameworkTests.csproj",
       "libraryId": "Microsoft.TestPlatform.TestHost",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"

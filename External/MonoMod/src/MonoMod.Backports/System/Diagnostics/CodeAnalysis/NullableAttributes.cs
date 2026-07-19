@@ -1,5 +1,6 @@
 using System;
 
+#if !NET5_0_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis
 {
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
@@ -65,3 +66,4 @@ namespace System.Diagnostics.CodeAnalysis
         public string[] Members { get; }
     }
 }
+#endif

@@ -1,8 +1,0 @@
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.ILHelpers/debug_net7.0/MonoMod.ILHelpers.deps.json
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.ILHelpers/debug_net7.0/MonoMod.ILHelpers.dll
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.ILHelpers/debug_net7.0/MonoMod.ILHelpers.pdb
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.ILHelpers/debug_net7.0/MonoMod.ILHelpers.ilproj.CoreCompileInputs.cache
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.ILHelpers/debug_net7.0/version/version.h
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.ILHelpers/debug_net7.0/MonoMod.ILHelpers.sourcelink.json
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.ILHelpers/debug_net7.0/verpatched/MonoMod.ILHelpers.dll
-/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.ILHelpers/debug_net7.0/MonoMod.ILHelpers.pdb

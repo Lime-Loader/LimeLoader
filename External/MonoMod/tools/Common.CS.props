@@ -56,7 +56,7 @@
     </PackageReference>
     <PackageReference Include="IsExternalInit" Version="1.0.3">
       <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <IncludeAssets>runtime; build; native; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 

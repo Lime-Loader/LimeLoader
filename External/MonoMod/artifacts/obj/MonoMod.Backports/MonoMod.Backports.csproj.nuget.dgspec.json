@@ -146,7 +146,7 @@
           "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -181,7 +181,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -220,7 +220,7 @@
           "targetAlias": "netcoreapp3.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -249,7 +249,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -301,7 +301,7 @@
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -330,7 +330,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -382,7 +382,7 @@
           "targetAlias": "net5.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -411,7 +411,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -463,7 +463,7 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -492,7 +492,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -544,7 +544,7 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -573,7 +573,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -625,7 +625,7 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -654,7 +654,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -698,7 +698,7 @@
           "targetAlias": "net35",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -733,7 +733,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -761,7 +761,7 @@
           "targetAlias": "net452",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -796,7 +796,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -828,7 +828,7 @@
           "targetAlias": "netstandard2.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -863,7 +863,7 @@
               "autoReferenced": true
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -910,7 +910,7 @@
           "targetAlias": "netstandard2.1",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -939,7 +939,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"

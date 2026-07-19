@@ -3725,7 +3725,8 @@
         "enableAudit": "false",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -3795,7 +3796,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

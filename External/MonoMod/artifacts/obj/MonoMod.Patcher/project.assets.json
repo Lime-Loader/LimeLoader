@@ -5,9 +5,9 @@
       "IsExternalInit/1.0.3": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net20/IsExternalInit/IsExternalInit.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -105,59 +105,9 @@
       "Nullable/1.3.1": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net20/Nullable/AllowNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/DisallowNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/DoesNotReturnAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/DoesNotReturnIfAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/MaybeNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/MaybeNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/MemberNotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/MemberNotNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/NotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/NotNullIfNotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net20/Nullable/NotNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -219,9 +169,9 @@
       "IsExternalInit/1.0.3": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net40/IsExternalInit/IsExternalInit.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -335,59 +285,9 @@
       "Nullable/1.3.1": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net40/Nullable/AllowNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/DisallowNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/DoesNotReturnAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/DoesNotReturnIfAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/MaybeNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/MaybeNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/MemberNotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/MemberNotNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/NotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/NotNullIfNotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/net40/Nullable/NotNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -461,9 +361,9 @@
       "IsExternalInit/1.0.3": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -589,59 +489,9 @@
       "Nullable/1.3.1": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/netstandard2.0/Nullable/AllowNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/DisallowNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/MaybeNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/MemberNotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/NotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
-            "copyToOutput": false
-          },
-          "contentFiles/cs/netstandard2.0/Nullable/NotNullWhenAttribute.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -736,9 +586,9 @@
       "IsExternalInit/1.0.3": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -904,9 +754,9 @@
       "IsExternalInit/1.0.3": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -1072,9 +922,9 @@
       "IsExternalInit/1.0.3": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -1240,9 +1090,9 @@
       "IsExternalInit/1.0.3": {
         "type": "package",
         "contentFiles": {
-          "contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs": {
-            "buildAction": "Compile",
-            "codeLanguage": "cs",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
             "copyToOutput": false
           }
         },
@@ -3250,7 +3100,7 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "IsExternalInit": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.3, )"
@@ -3283,7 +3133,7 @@
             "version": "[0.11.5, )"
           },
           "Nullable": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.3.1, )"
@@ -3331,7 +3181,7 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "IsExternalInit": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.3, )"
@@ -3364,7 +3214,7 @@
             "version": "[0.11.5, )"
           },
           "Nullable": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.3.1, )"
@@ -3412,7 +3262,7 @@
         "targetAlias": "net7.0",
         "dependencies": {
           "IsExternalInit": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.3, )"
@@ -3445,7 +3295,7 @@
             "version": "[0.11.5, )"
           },
           "Nullable": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.3.1, )"
@@ -3493,7 +3343,7 @@
         "targetAlias": "net8.0",
         "dependencies": {
           "IsExternalInit": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.3, )"
@@ -3526,7 +3376,7 @@
             "version": "[0.11.5, )"
           },
           "Nullable": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.3.1, )"
@@ -3566,7 +3416,7 @@
         "targetAlias": "net35",
         "dependencies": {
           "IsExternalInit": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.3, )"
@@ -3605,7 +3455,7 @@
             "version": "[0.10.4, )"
           },
           "Nullable": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.3.1, )"
@@ -3629,7 +3479,7 @@
         "targetAlias": "net452",
         "dependencies": {
           "IsExternalInit": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.3, )"
@@ -3668,7 +3518,7 @@
             "version": "[0.11.5, )"
           },
           "Nullable": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.3.1, )"
@@ -3692,7 +3542,7 @@
         "targetAlias": "netstandard2.0",
         "dependencies": {
           "IsExternalInit": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.3, )"
@@ -3731,7 +3581,7 @@
             "autoReferenced": true
           },
           "Nullable": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.3.1, )"

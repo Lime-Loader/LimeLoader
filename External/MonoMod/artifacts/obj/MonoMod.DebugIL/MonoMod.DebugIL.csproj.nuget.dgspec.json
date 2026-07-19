@@ -138,14 +138,15 @@
           "enableAudit": "false",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -180,7 +181,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -213,13 +214,13 @@
               "version": "[6.0.0, 6.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netcoreapp3.0": {
           "targetAlias": "netcoreapp3.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -248,7 +249,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -294,13 +295,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -329,7 +330,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -375,13 +376,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -410,7 +411,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -456,13 +457,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -491,7 +492,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -537,13 +538,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -572,7 +573,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -618,13 +619,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -653,7 +654,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -691,13 +692,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
         },
         "net35": {
           "targetAlias": "net35",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -732,7 +733,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -754,13 +755,13 @@
               "version": "[6.0.0, 6.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net452": {
           "targetAlias": "net452",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -795,7 +796,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -821,13 +822,13 @@
               "version": "[6.0.0, 6.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -862,7 +863,7 @@
               "autoReferenced": true
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -903,13 +904,13 @@
               "version": "[6.0.0, 6.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -938,7 +939,7 @@
               "version": "[8.0.0, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -984,7 +985,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1059,14 +1060,15 @@
           "enableAudit": "false",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -1099,7 +1101,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -1141,13 +1143,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net452": {
           "targetAlias": "net452",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -1186,7 +1188,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -1198,7 +1200,7 @@
               "version": "[1.1.0, )"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1287,7 +1289,8 @@
           "enableAudit": "false",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netcoreapp2.1": {
@@ -1343,7 +1346,7 @@
               "version": "[1.0.0, 1.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netcoreapp3.0": {
           "targetAlias": "netcoreapp3.0",
@@ -1405,7 +1408,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
@@ -1467,7 +1470,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net5.0": {
           "targetAlias": "net5.0",
@@ -1529,7 +1532,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net6.0": {
           "targetAlias": "net6.0",
@@ -1591,7 +1594,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net7.0": {
           "targetAlias": "net7.0",
@@ -1653,7 +1656,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net8.0": {
           "targetAlias": "net8.0",
@@ -1707,7 +1710,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
         },
         "net35": {
           "targetAlias": "net35",
@@ -1751,7 +1754,7 @@
               "version": "[1.0.0, 1.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net452": {
           "targetAlias": "net452",
@@ -1795,7 +1798,7 @@
               "version": "[1.0.0, 1.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
@@ -1850,7 +1853,7 @@
               "version": "[1.0.0, 1.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
@@ -1904,7 +1907,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2048,14 +2051,15 @@
           "enableAudit": "false",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2088,7 +2092,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2130,13 +2134,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2169,7 +2173,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2211,13 +2215,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2250,7 +2254,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2292,13 +2296,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2331,7 +2335,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2365,13 +2369,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
         },
         "net35": {
           "targetAlias": "net35",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2410,7 +2414,7 @@
               "version": "[0.10.4, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2428,13 +2432,13 @@
               "version": "[25.0.0-prerelease.1, 25.0.0-prerelease.1]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net452": {
           "targetAlias": "net452",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2473,7 +2477,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2491,13 +2495,13 @@
               "version": "[25.0.0-prerelease.1, 25.0.0-prerelease.1]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2536,7 +2540,7 @@
               "autoReferenced": true
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2573,7 +2577,7 @@
               "version": "[25.0.0-prerelease.1, 25.0.0-prerelease.1]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2696,14 +2700,15 @@
           "enableAudit": "false",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2736,7 +2741,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2778,13 +2783,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2817,7 +2822,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2859,13 +2864,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2898,7 +2903,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -2940,13 +2945,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -2979,7 +2984,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -3013,13 +3018,13 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
         },
         "net35": {
           "targetAlias": "net35",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -3058,7 +3063,7 @@
               "version": "[0.10.4, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -3076,13 +3081,13 @@
               "version": "[25.0.0, 25.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "net452": {
           "targetAlias": "net452",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -3121,7 +3126,7 @@
               "version": "[0.11.5, )"
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -3139,13 +3144,13 @@
               "version": "[25.0.0, 25.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         },
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -3184,7 +3189,7 @@
               "autoReferenced": true
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
@@ -3221,7 +3226,7 @@
               "version": "[25.0.0, 25.0.0]"
             }
           ],
-          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/8.0.423/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -19,16 +19,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/buildMultiTargeting/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/buildMultiTargeting/Microsoft.SourceLink.GitHub.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/buildMultiTargeting/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/buildMultiTargeting/Microsoft.Net.Compilers.Toolset.props')" />
   </ImportGroup>
-  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net8.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs')">
-      <NuGetPackageId>IsExternalInit</NuGetPackageId>
-      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
-      <NuGetItemType>Compile</NuGetItemType>
-      <Pack>false</Pack>
-      <Private>False</Private>
-      <Link>IsExternalInit/IsExternalInit.cs</Link>
-    </Compile>
-  </ItemGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net8.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
     <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />

@@ -52,7 +52,7 @@
           "targetAlias": "netstandard2.0",
           "dependencies": {
             "IsExternalInit": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.3, )"
@@ -92,7 +92,7 @@
               "autoReferenced": true
             },
             "Nullable": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, Analyzers",
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.3.1, )"
