@@ -34,52 +34,54 @@ jobs:
           unzip -q /tmp/android-ndk-r26d.zip -d $HOME/ndk
           echo "ANDROID_NDK_HOME=$HOME/ndk/android-ndk-r26d" >> $GITHUB_ENV
 
-      - name: Verify External folders
+      - name: Verify repository layout
         run: |
-          ls LimeLoader/External
-          ls LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour
+          pwd
+          ls
+          ls External
+          ls External/MonoMod/src/MonoMod.RuntimeDetour
 
       - name: Build MonoMod (Release)
         run: |
           export PATH="$HOME/.dotnet:$PATH"
-          SLN="$(pwd)/LimeLoader/"
+          SLN="$(pwd)/"
 
-          dotnet build "$(pwd)/LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj" \
+          dotnet build "$(pwd)/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj" \
             -c Release \
             -p:SolutionDir="$SLN"
 
-          dotnet build "$(pwd)/LimeLoader/External/MonoMod/src/MonoMod.Patcher/MonoMod.Patcher.csproj" \
+          dotnet build "$(pwd)/External/MonoMod/src/MonoMod.Patcher/MonoMod.Patcher.csproj" \
             -c Release \
             -p:SolutionDir="$SLN"
 
       - name: Build managed loader (Release)
         run: |
           export PATH="$HOME/.dotnet:$PATH"
-          SLN="$(pwd)/LimeLoader/"
+          SLN="$(pwd)/"
 
-          dotnet build LimeLoader/MelonLoader.csproj \
+          dotnet build MelonLoader.csproj \
             -c Release \
             -f net8 \
             -p:SolutionDir="$SLN"
 
-          dotnet build LimeLoader/MelonLoader.csproj \
+          dotnet build MelonLoader.csproj \
             -c Release \
             -f net35 \
             -p:SolutionDir="$SLN"
 
-          dotnet build LimeLoader/MelonLoader.NativeHost/MelonLoader.NativeHost.csproj \
+          dotnet build MelonLoader.NativeHost/MelonLoader.NativeHost.csproj \
             -c Release \
             -p:SolutionDir="$SLN"
 
-          dotnet build LimeLoader/Dependencies/SupportModules/Il2Cpp/Il2Cpp.csproj \
+          dotnet build Dependencies/SupportModules/Il2Cpp/Il2Cpp.csproj \
             -c Release \
             -p:SolutionDir="$SLN"
 
-          dotnet build LimeLoader/Dependencies/SupportModules/Mono/Mono.csproj \
+          dotnet build Dependencies/SupportModules/Mono/Mono.csproj \
             -c Release \
             -p:SolutionDir="$SLN"
 
-          dotnet build LimeLoader/Dependencies/Il2CppAssemblyGenerator/Il2CppAssemblyGenerator.csproj \
+          dotnet build Dependencies/Il2CppAssemblyGenerator/Il2CppAssemblyGenerator.csproj \
             -c Release \
             -p:SolutionDir="$SLN"
 
@@ -88,17 +90,15 @@ jobs:
           export ANDROID_NDK_HOME="$HOME/ndk/android-ndk-r26d"
           export PATH="$HOME/.cargo/bin:$PATH"
 
-          cd LimeLoader/Rust/Bootstrap || cd LimeLoader/Rust
+          cd Rust/Bootstrap || cd Rust
           cargo ndk \
             -t arm64-v8a \
-            -o ../../LimeLoader/jniLibs \
+            -o ../../jniLibs \
             build \
             --release
 
       - name: Assemble melon_data.zip
         run: |
-          cd LimeLoader
-
           rm -rf melon_data
           mkdir -p melon_data
 
@@ -131,6 +131,6 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: LimeLoader/melon_data.zip
+          asset_path: melon_data.zip
           asset_name: melon_data.zip
           asset_content_type: application/zip
