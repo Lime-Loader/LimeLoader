@@ -1,0 +1,16 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.Core/debug_net6.0/MonoMod.Core.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.Core/debug_net6.0/MonoMod.Core.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.Core/debug_net6.0/MonoMod.Core.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.Core/debug_net6.0/MonoMod.Core.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod..56931211.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/refint/MonoMod.Core.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/MonoMod.Core.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Core/debug_net6.0/ref/MonoMod.Core.dll

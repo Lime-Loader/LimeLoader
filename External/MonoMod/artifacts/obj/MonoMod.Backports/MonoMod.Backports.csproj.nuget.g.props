@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/home/blckout/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/home/blckout/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.14.3</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/home/blckout/.nuget/packages/" />
+  </ItemGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == '' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/buildMultiTargeting/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/buildMultiTargeting/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/buildMultiTargeting/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/buildMultiTargeting/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/buildMultiTargeting/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/buildMultiTargeting/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/buildMultiTargeting/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/buildMultiTargeting/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/buildMultiTargeting/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/buildMultiTargeting/Microsoft.Net.Compilers.Toolset.props')" />
+  </ImportGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net35' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/AllowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/AllowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/AllowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/DisallowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/DisallowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DisallowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/DoesNotReturnAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/DoesNotReturnAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/DoesNotReturnIfAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/DoesNotReturnIfAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnIfAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MaybeNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MaybeNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MaybeNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MaybeNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MemberNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MemberNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MemberNotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/MemberNotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/NotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/NotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/NotNullIfNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/NotNullIfNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullIfNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/NotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net20/Nullable/NotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullWhenAttribute.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net35' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net20/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net20/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net452' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/AllowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/AllowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/AllowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/DisallowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/DisallowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DisallowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/DoesNotReturnAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/DoesNotReturnAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/DoesNotReturnIfAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/DoesNotReturnIfAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnIfAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MaybeNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MaybeNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MaybeNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MaybeNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MemberNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MemberNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MemberNotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/MemberNotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/NotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/NotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/NotNullIfNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/NotNullIfNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullIfNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/NotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/net40/Nullable/NotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullWhenAttribute.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net452' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net40/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net40/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net5.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net6.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net7.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'net8.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/net5.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netcoreapp2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/AllowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/AllowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/AllowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DisallowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DisallowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DisallowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnIfAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullIfNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullWhenAttribute.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netcoreapp2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netcoreapp3.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullWhenAttribute.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netcoreapp3.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netcoreapp3.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullWhenAttribute.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netcoreapp3.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netstandard2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/AllowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/AllowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/AllowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DisallowNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DisallowNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DisallowNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/DoesNotReturnIfAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MaybeNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullWhenAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullIfNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.0/Nullable/NotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/NotNullWhenAttribute.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netstandard2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netstandard2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs')">
+      <NuGetPackageId>Nullable</NuGetPackageId>
+      <NuGetPackageVersion>1.3.1</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Nullable/MemberNotNullWhenAttribute.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(TargetFramework)' == 'netstandard2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/contentFiles/cs/netstandard2.0/IsExternalInit/IsExternalInit.cs')">
+      <NuGetPackageId>IsExternalInit</NuGetPackageId>
+      <NuGetPackageVersion>1.0.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>IsExternalInit/IsExternalInit.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net35' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net452' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net5.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net7.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net8.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.netcore.app/2.1.0/build/netcoreapp2.1/Microsoft.NETCore.App.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.app/2.1.0/build/netcoreapp2.1/Microsoft.NETCore.App.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props" Condition="Exists('$(NuGetPackageRoot)unnugetizer/1.1.0/build/UnNuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props" Condition="Exists('$(NuGetPackageRoot)nullable/1.3.1/build/Nullable.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/8.0.0/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/8.0.0/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/8.0.0/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.compilers.toolset/4.9.2/build/Microsoft.Net.Compilers.Toolset.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.csharp.codestyle/4.9.2/build/Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.bannedapianalyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props" Condition="Exists('$(NuGetPackageRoot)isexternalinit/1.0.3/build/IsExternalInit.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net452' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle Condition=" '$(PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2</PkgMicrosoft_CodeAnalysis_CSharp_CodeStyle>
+    <PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers)' == '' ">/home/blckout/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.3.4</PkgMicrosoft_CodeAnalysis_BannedApiAnalyzers>
+  </PropertyGroup>
+</Project>

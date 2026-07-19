@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = HarmonyLib
+build_property.ProjectDir = /home/blckout/Documents/LemonLoaderFix/LimeLoader/External/HarmonyX/Harmony/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

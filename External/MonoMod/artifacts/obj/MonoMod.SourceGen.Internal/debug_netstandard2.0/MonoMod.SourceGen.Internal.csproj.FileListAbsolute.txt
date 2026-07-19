@@ -1,0 +1,15 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/refint/MonoMod.SourceGen.Internal.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/MonoMod.SourceGen.Internal.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.SourceGen.Internal/debug_netstandard2.0/ref/MonoMod.SourceGen.Internal.dll

@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/JNISharp.csproj": {}
+  },
+  "projects": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/JNISharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/JNISharp.csproj",
+        "projectName": "JNISharp",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/JNISharp.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35"
+        ],
+        "sources": {
+          "https://nuget.bepinex.dev/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

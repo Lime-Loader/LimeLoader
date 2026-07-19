@@ -1,0 +1,14 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/bin/Debug/netstandard2.1/Il2CppInterop.Generator.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/bin/Debug/netstandard2.1/Il2CppInterop.Generator.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/bin/Debug/netstandard2.1/Il2CppInterop.Generator.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/bin/Debug/netstandard2.1/Il2CppInterop.Common.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/bin/Debug/netstandard2.1/Il2CppInterop.Common.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppIn.2F7C00C7.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Generator/obj/Debug/netstandard2.1/Il2CppInterop.Generator.xml

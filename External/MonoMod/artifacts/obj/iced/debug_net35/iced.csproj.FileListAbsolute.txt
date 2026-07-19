@@ -1,0 +1,15 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/iced/debug_net35/MonoMod.Iced.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/iced/debug_net35/MonoMod.Iced.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/iced/debug_net35/MonoMod.Iced.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/iced.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/iced.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/iced.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/iced.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/iced.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/iced.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/iced.csproj.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/MonoMod.Iced.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/refint/MonoMod.Iced.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/MonoMod.Iced.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/MonoMod.Iced.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/iced/debug_net35/ref/MonoMod.Iced.dll

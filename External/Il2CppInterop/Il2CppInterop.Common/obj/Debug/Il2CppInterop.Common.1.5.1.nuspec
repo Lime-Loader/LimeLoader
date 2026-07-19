@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Il2CppInterop.Common</id>
+    <version>1.5.1</version>
+    <authors>BepInEx, knah et al.</authors>
+    <license type="expression">LGPL-3.0-only</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-3.0-only</licenseUrl>
+    <icon>logo_icon.png</icon>
+    <readme>README.md</readme>
+    <description>Common API for Il2CppInterop packages</description>
+    <repository type="git" commit="631db44c338576ef0a2a81b2871a52a5dc338990" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Disarm" version="2022.1.0-master.57" exclude="Build,Analyzers" />
+        <dependency id="Iced" version="1.17.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="6.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.Net.Http" version="4.3.4" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/bin/Debug/netstandard2.0/Il2CppInterop.Common.dll" target="lib/netstandard2.0/Il2CppInterop.Common.dll" />
+    <file src="/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/bin/Debug/netstandard2.0/Il2CppInterop.Common.xml" target="lib/netstandard2.0/Il2CppInterop.Common.xml" />
+    <file src="/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/logo/logo_icon.png" target="logo_icon.png" />
+    <file src="/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/README.md" target="README.md" />
+  </files>
+</package>

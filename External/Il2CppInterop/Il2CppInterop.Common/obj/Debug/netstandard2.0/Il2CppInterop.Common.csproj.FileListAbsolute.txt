@@ -1,0 +1,11 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/bin/Debug/netstandard2.0/Il2CppInterop.Common.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/bin/Debug/netstandard2.0/Il2CppInterop.Common.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/bin/Debug/netstandard2.0/Il2CppInterop.Common.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/Debug/netstandard2.0/Il2CppInterop.Common.xml

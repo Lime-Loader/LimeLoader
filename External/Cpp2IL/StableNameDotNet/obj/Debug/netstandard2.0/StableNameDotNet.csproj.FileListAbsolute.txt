@@ -1,0 +1,9 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/bin/Debug/netstandard2.0/StableNameDotNet.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/bin/Debug/netstandard2.0/StableNameDotNet.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/obj/Debug/netstandard2.0/StableNameDotNet.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/obj/Debug/netstandard2.0/StableNameDotNet.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/obj/Debug/netstandard2.0/StableNameDotNet.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/obj/Debug/netstandard2.0/StableNameDotNet.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/obj/Debug/netstandard2.0/StableNameDotNet.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/obj/Debug/netstandard2.0/StableNameDotNet.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/obj/Debug/netstandard2.0/StableNameDotNet.dll

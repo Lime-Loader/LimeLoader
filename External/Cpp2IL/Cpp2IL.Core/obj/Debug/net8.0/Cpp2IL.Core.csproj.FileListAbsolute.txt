@@ -1,0 +1,15 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.Core.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.Core.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.Core.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.Core.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.Core.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/bin/Debug/net8.0/Cpp2IL.Core.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/bin/Debug/net8.0/Cpp2IL.Core.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/bin/Debug/net8.0/LibCpp2IL.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/bin/Debug/net8.0/StableNameDotNet.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/bin/Debug/net8.0/WasmDisassembler.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.C.9B69EB9A.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/Cpp2IL.Core.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/refint/Cpp2IL.Core.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/Cpp2IL.Core/obj/Debug/net8.0/ref/Cpp2IL.Core.dll

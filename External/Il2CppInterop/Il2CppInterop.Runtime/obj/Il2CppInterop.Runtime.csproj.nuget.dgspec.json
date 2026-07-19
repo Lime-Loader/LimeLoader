@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/Il2CppInterop.Runtime.csproj": {}
+  },
+  "projects": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/Il2CppInterop.Common.csproj": {
+      "version": "1.5.1",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/Il2CppInterop.Common.csproj",
+        "projectName": "Il2CppInterop.Common",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/Il2CppInterop.Common.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://nuget.bepinex.dev/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Disarm": {
+              "target": "Package",
+              "version": "[2022.1.0-master.57, )"
+            },
+            "Iced": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/Il2CppInterop.Runtime.csproj": {
+      "version": "1.5.1",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/Il2CppInterop.Runtime.csproj",
+        "projectName": "Il2CppInterop.Runtime",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/Il2CppInterop.Runtime.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://nuget.bepinex.dev/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/Il2CppInterop.Common.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Common/Il2CppInterop.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Iced": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "PolySharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.14.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "SyT7Q7jc6sk=",
+  "success": true,
+  "projectFilePath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/docfx/docfx.csproj",
+  "expectedPackageFiles": [
+    "/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0/microsoft.build.tasks.git.8.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0/microsoft.sourcelink.common.8.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0/microsoft.sourcelink.github.8.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/unnugetizer/1.1.0/unnugetizer.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

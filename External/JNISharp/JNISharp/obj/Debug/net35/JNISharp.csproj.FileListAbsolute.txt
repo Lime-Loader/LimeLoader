@@ -1,0 +1,9 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/bin/Debug/net35/JNISharp.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/bin/Debug/net35/JNISharp.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/Debug/net35/JNISharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/Debug/net35/JNISharp.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/Debug/net35/JNISharp.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/Debug/net35/JNISharp.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/Debug/net35/JNISharp.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/Debug/net35/JNISharp.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/obj/Debug/net35/JNISharp.pdb

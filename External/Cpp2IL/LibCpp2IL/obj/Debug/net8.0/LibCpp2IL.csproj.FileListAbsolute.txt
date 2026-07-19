@@ -1,0 +1,13 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/bin/Debug/net8.0/LibCpp2IL.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/bin/Debug/net8.0/LibCpp2IL.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/bin/Debug/net8.0/WasmDisassembler.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.csproj.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/LibCpp2IL.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/refint/LibCpp2IL.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/LibCpp2IL/obj/Debug/net8.0/ref/LibCpp2IL.dll

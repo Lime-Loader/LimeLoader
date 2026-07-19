@@ -1,0 +1,4349 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj": {}
+  },
+  "projects": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+      "version": "1.21.0",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+        "projectName": "Iced",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/tools/../artifacts/obj/iced/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/nuget.config",
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35",
+          "net452",
+          "net5.0",
+          "net6.0",
+          "net7.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1504"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreLockProperties": {
+          "restorePackagesWithLockFile": "false"
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "false",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
+        },
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "System.Reflection.Emit.ILGeneration": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+      "version": "1.1.2-alpha.dev",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj",
+        "projectName": "MonoMod.Backports",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/tools/../artifacts/obj/MonoMod.Backports/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/nuget.config",
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35",
+          "net452",
+          "net5.0",
+          "net6.0",
+          "net7.0",
+          "net8.0",
+          "netcoreapp2.1",
+          "netcoreapp3.0",
+          "netcoreapp3.1",
+          "netstandard2.0",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreLockProperties": {
+          "restorePackagesWithLockFile": "false"
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "false",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
+        },
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "System.Reflection.Emit.ILGeneration": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "System.Reflection.Emit.ILGeneration": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Backports",
+              "version": "[1.1.0, 1.1.0]"
+            },
+            {
+              "name": "System.Collections.Immutable",
+              "version": "[6.0.0, 6.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+      "version": "1.1.2-alpha.dev",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj",
+        "projectName": "MonoMod.Core",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/tools/../artifacts/obj/MonoMod.Core/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/nuget.config",
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35",
+          "net452",
+          "net5.0",
+          "net6.0",
+          "net7.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+                "privateAssets": "all"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+                "privateAssets": "all"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+                "privateAssets": "all"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+                "privateAssets": "all"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+                "privateAssets": "all"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+                "privateAssets": "all"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/external/iced.csproj",
+                "privateAssets": "all"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreLockProperties": {
+          "restorePackagesWithLockFile": "false"
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "false",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "MonoMod.Core",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "MonoMod.Core",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "MonoMod.Core",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Core",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
+        },
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.10.4, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Core",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Core",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "System.Reflection.Emit.ILGeneration": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Core",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+      "version": "1.1.0-alpha.dev",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj",
+        "projectName": "MonoMod.ILHelpers",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/tools/../artifacts/obj/MonoMod.ILHelpers/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/nuget.config",
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35",
+          "net452",
+          "net5.0",
+          "net6.0",
+          "net7.0",
+          "net8.0",
+          "netcoreapp2.1",
+          "netcoreapp3.0",
+          "netcoreapp3.1",
+          "netstandard2.0",
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          },
+          "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
+            "projectReferences": {}
+          },
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          },
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          },
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          },
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          },
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          },
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {}
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {}
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          },
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "restoreLockProperties": {
+          "restorePackagesWithLockFile": "false"
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "false",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
+        },
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "runtime.linux-x64.microsoft.netcore.ilasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            },
+            "runtime.linux-x64.microsoft.netcore.ildasm": {
+              "include": "Runtime, Compile, Build, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.ILHelpers",
+              "version": "[1.0.0, 1.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj": {
+      "version": "25.1.2-alpha.dev",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj",
+        "projectName": "MonoMod.RuntimeDetour",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/tools/../artifacts/obj/MonoMod.RuntimeDetour/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/nuget.config",
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35",
+          "net452",
+          "net5.0",
+          "net6.0",
+          "net7.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Core/MonoMod.Core.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreLockProperties": {
+          "restorePackagesWithLockFile": "false"
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "false",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "MonoMod.RuntimeDetour",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "MonoMod.RuntimeDetour",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "MonoMod.RuntimeDetour",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.RuntimeDetour",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
+        },
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.10.4, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.RuntimeDetour",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.RuntimeDetour",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "System.Reflection.Emit.ILGeneration": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.RuntimeDetour",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj": {
+      "version": "25.0.6-alpha.dev",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj",
+        "projectName": "MonoMod.Utils",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Utils/MonoMod.Utils.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/tools/../artifacts/obj/MonoMod.Utils/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/nuget.config",
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35",
+          "net452",
+          "net5.0",
+          "net6.0",
+          "net7.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.Backports/MonoMod.Backports.csproj"
+              },
+              "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj": {
+                "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/src/MonoMod.ILHelpers/MonoMod.ILHelpers.ilproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreLockProperties": {
+          "restorePackagesWithLockFile": "false"
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "false",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "MonoMod.Utils",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "MonoMod.Utils",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "MonoMod.Utils",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Utils",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/PortableRuntimeIdentifierGraph.json"
+        },
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.10.4, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Utils",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Utils",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "IsExternalInit": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp.CodeStyle": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.Net.Compilers.Toolset": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Nullable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "System.Reflection.Emit.ILGeneration": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "UnNuGetizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "MonoMod.Utils",
+              "version": "[25.0.0, 25.0.0]"
+            }
+          ],
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

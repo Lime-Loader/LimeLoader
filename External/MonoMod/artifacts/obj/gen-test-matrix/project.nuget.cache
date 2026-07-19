@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "whJD+fYG910=",
+  "success": true,
+  "projectFilePath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/build/gen-test-matrix/gen-test-matrix.csproj",
+  "expectedPackageFiles": [
+    "/home/blckout/.nuget/packages/chell/1.0.0/chell.1.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/kokuban/0.1.0/kokuban.0.1.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.build.tasks.git/8.0.0/microsoft.build.tasks.git.8.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.9.2/microsoft.codeanalysis.csharp.codestyle.4.9.2.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.extensions.filesystemglobbing/5.0.0/microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.net.compilers.toolset/4.9.2/microsoft.net.compilers.toolset.4.9.2.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.sourcelink.common/8.0.0/microsoft.sourcelink.common.8.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.sourcelink.github/8.0.0/microsoft.sourcelink.github.8.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/system.io.pipelines/5.0.0/system.io.pipelines.5.0.0.nupkg.sha512",
+    "/home/blckout/.nuget/packages/unnugetizer/1.1.0/unnugetizer.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

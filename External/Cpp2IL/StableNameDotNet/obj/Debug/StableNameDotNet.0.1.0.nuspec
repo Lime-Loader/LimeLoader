@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>StableNameDotNet</id>
+    <version>0.1.0</version>
+    <authors>Samboy063</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Library for generating somewhat stable names for obfuscated types, based on their content.</description>
+    <copyright>Copyright © Samboy063 2022-2026</copyright>
+    <repository type="git" url="https://github.com/SamboyCoding/Cpp2IL.git" branch="refs/heads/development" commit="383592734f1b4c707ada453f1fb1b7f9ce4a490c" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/StableNameDotNet/bin/Debug/netstandard2.0/StableNameDotNet.dll" target="lib/netstandard2.0/StableNameDotNet.dll" />
+  </files>
+</package>

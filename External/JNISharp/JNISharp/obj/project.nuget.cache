@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yiu0rsdEQqE=",
+  "success": true,
+  "projectFilePath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/JNISharp/JNISharp/JNISharp.csproj",
+  "expectedPackageFiles": [
+    "/home/blckout/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.3/microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "/home/blckout/.nuget/packages/microsoft.netframework.referenceassemblies.net35/1.0.3/microsoft.netframework.referenceassemblies.net35.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

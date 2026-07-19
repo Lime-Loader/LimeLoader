@@ -1,0 +1,16 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/bin/Debug/net6.0/Il2CppInterop.Runtime.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/bin/Debug/net6.0/Il2CppInterop.Runtime.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/bin/Debug/net6.0/Il2CppInterop.Runtime.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/bin/Debug/net6.0/Il2CppInterop.Common.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/bin/Debug/net6.0/Il2CppInterop.Common.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppIn.049991B8.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/refint/Il2CppInterop.Runtime.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/Il2CppInterop.Runtime.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Il2CppInterop/Il2CppInterop.Runtime/obj/Debug/net6.0/ref/Il2CppInterop.Runtime.dll

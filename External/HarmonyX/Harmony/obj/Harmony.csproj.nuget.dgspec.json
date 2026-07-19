@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/HarmonyX/Harmony/Harmony.csproj": {}
+  },
+  "projects": {
+    "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/HarmonyX/Harmony/Harmony.csproj": {
+      "version": "2.13.0",
+      "restore": {
+        "projectUniqueName": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/HarmonyX/Harmony/Harmony.csproj",
+        "projectName": "HarmonyX",
+        "projectPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/HarmonyX/Harmony/Harmony.csproj",
+        "packagesPath": "/home/blckout/.nuget/packages/",
+        "outputPath": "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/HarmonyX/Harmony/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/HarmonyX/nuget.config",
+          "/home/blckout/Documents/LemonLoaderFix/LimeLoader/NuGet.config",
+          "/home/blckout/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net35",
+          "net452",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://nuget.bepinex.dev/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net35": {
+            "targetAlias": "net35",
+            "projectReferences": {}
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {}
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU5131"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net35": {
+          "targetAlias": "net35",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.10.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.5, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Reflection.Emit": {
+              "include": "Compile",
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.ILGeneration": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/home/blckout/.dotnet/sdk/9.0.316/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

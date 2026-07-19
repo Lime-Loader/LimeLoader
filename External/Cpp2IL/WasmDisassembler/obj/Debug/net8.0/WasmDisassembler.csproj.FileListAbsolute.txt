@@ -1,0 +1,10 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/bin/Debug/net8.0/WasmDisassembler.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/bin/Debug/net8.0/WasmDisassembler.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/WasmDisassembler.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/WasmDisassembler.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/WasmDisassembler.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/WasmDisassembler.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/WasmDisassembler.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/WasmDisassembler.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/refint/WasmDisassembler.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/Cpp2IL/WasmDisassembler/obj/Debug/net8.0/ref/WasmDisassembler.dll

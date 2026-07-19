@@ -1,0 +1,16 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.deps.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod..731861C4.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/refint/MonoMod.RuntimeDetour.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/MonoMod.RuntimeDetour.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.RuntimeDetour/debug_net7.0/ref/MonoMod.RuntimeDetour.dll

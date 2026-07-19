@@ -1,0 +1,15 @@
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.Backports/debug_net452/MonoMod.Backports.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.Backports/debug_net452/MonoMod.Backports.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/bin/MonoMod.Backports/debug_net452/MonoMod.Backports.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.csproj.AssemblyReference.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.GeneratedMSBuildEditorConfig.editorconfig
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.AssemblyInfoInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.AssemblyInfo.cs
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.csproj.CoreCompileInputs.cache
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.sourcelink.json
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod..1DDAC1F9.Up2Date
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/refint/MonoMod.Backports.dll
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.xml
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/MonoMod.Backports.pdb
+/home/blckout/Documents/LemonLoaderFix/LimeLoader/External/MonoMod/artifacts/obj/MonoMod.Backports/debug_net452/ref/MonoMod.Backports.dll
