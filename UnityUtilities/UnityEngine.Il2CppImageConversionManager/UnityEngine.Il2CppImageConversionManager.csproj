@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>UnityEngine</RootNamespace>
+        <AssemblyName>UnityEngine.Il2CppImageConversionManager</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Nullable>disable</Nullable>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\MelonLoader\MelonLoader.csproj" Private="false" />
+        <ProjectReference Include="..\..\External\Il2CppInterop\Il2CppInterop.Runtime\Il2CppInterop.Runtime.csproj" Private="false" />
+        <PackageReference Include="AssetRipper.VersionUtilities" Version="1.5.0" />
+        <PackageReference Include="Il2CppInterop.ReferenceLibs" Version="1.0.0" Private="false">
+          <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>

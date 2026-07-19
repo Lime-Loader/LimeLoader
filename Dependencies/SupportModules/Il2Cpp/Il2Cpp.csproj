@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<RootNamespace>MelonLoader.Support</RootNamespace>
+		<TargetFramework>net8</TargetFramework>
+		<LangVersion>Latest</LangVersion>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<OutputPath>$(SolutionDir)Output\$(Configuration)\MelonLoader\Dependencies\SupportModules\</OutputPath>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DebugType>embedded</DebugType>
+		<DefineConstants>SM_Il2Cpp</DefineConstants>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+		<RestoreAdditionalProjectSources>
+			https://nuget.bepinex.dev/v3/index.json
+		</RestoreAdditionalProjectSources>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="Libs\**" />
+	  <EmbeddedResource Remove="Libs\**" />
+	  <None Remove="Libs\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>Libs\Il2Cppmscorlib.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>Libs\Il2CppSystem.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="MonoMod.Core">
+		  <HintPath>..\..\..\External\MonoMod\artifacts\bin\MonoMod.Core\$(Configuration.ToLower())_net8.0\MonoMod.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="MonoMod.ILHelpers">
+		  <HintPath>..\..\..\External\MonoMod\artifacts\bin\MonoMod.ILHelpers\$(Configuration.ToLower())_net8.0\MonoMod.ILHelpers.dll</HintPath>
+		</Reference>
+		<Reference Include="MonoMod.RuntimeDetour">
+		  <HintPath>..\..\..\External\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\$(Configuration.ToLower())_net8.0\MonoMod.RuntimeDetour.dll</HintPath>
+		</Reference>
+		<Reference Include="MonoMod.Utils">
+		  <HintPath>..\..\..\External\MonoMod\artifacts\bin\MonoMod.Utils\$(Configuration.ToLower())_net8.0\MonoMod.Utils.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>Libs\UnityEngine.CoreModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="..\Component.cs" Link="Component.cs" />
+		<Compile Include="..\SupportModule_To.cs" Link="SupportModule_To.cs" />
+		<Compile Include="..\SceneHandler.cs" Link="SceneHandler.cs" />
+		<Compile Include="..\UnityMappers.cs" Link="UnityMappers.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\External\Il2CppInterop\Il2CppInterop.Common\Il2CppInterop.Common.csproj" />
+		<ProjectReference Include="..\..\..\External\Il2CppInterop\Il2CppInterop.HarmonySupport\Il2CppInterop.HarmonySupport.csproj" />
+		<ProjectReference Include="..\..\..\External\Il2CppInterop\Il2CppInterop.Runtime\Il2CppInterop.Runtime.csproj" />
+		<ProjectReference Include="..\..\..\MelonLoader\MelonLoader.csproj" Private="false" />
+		<PackageReference Include="AssetRipper.VersionUtilities" Version="1.5.0" ExcludeAssets="Runtime" />
+		<PackageReference Include="Iced" Version="1.21.0" />
+		<PackageReference Include="Mono.Cecil" Version="0.11.5" ExcludeAssets="Runtime" />
+		<PackageReference Include="Samboy063.Tomlet" Version="5.3.1" ExcludeAssets="Runtime" />
+	</ItemGroup>
+</Project>
