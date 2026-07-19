@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 jobs:
   build-and-release:
@@ -62,7 +63,6 @@ jobs:
           cd LimeLoader
           rm -rf melon_data
           mkdir -p melon_data
-          # prefer Release output, fall back to Debug if not present
           if [ -d Output/Release/MelonLoader ]; then cp -r Output/Release/MelonLoader melon_data/MelonLoader; else cp -r Output/Debug/MelonLoader melon_data/MelonLoader; fi
           if [ -d BaseLibs/dotnet_fixed_gc ]; then cp -r BaseLibs/dotnet_fixed_gc melon_data/dotnet; else mkdir -p melon_data/dotnet; fi
           cp -r jniLibs melon_data/native
