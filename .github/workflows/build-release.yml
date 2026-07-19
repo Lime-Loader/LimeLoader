@@ -9,8 +9,11 @@ on:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
@@ -33,39 +36,88 @@ jobs:
           unzip -q /tmp/android-ndk-r26d.zip -d $HOME/ndk
           echo "ANDROID_NDK_HOME=$HOME/ndk/android-ndk-r26d" >> $GITHUB_ENV
 
+      - name: Debug checkout
+        run: |
+          pwd
+          ls
+          ls LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour
+
       - name: Build MonoMod (Release)
         run: |
           export PATH="$HOME/.dotnet:$PATH"
-          SLN="$(pwd)/LimeLoader/"
-          dotnet build LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj -c Release -p:SolutionDir="$SLN"
-          dotnet build LimeLoader/External/MonoMod/src/MonoMod.Patcher/MonoMod.Patcher.csproj -c Release -p:SolutionDir="$SLN"
+
+          dotnet build "$(pwd)/LimeLoader/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj" \
+            -c Release \
+            -p:SolutionDir="$(pwd)/LimeLoader/"
+
+          dotnet build "$(pwd)/LimeLoader/External/MonoMod/src/MonoMod.Patcher/MonoMod.Patcher.csproj" \
+            -c Release \
+            -p:SolutionDir="$(pwd)/LimeLoader/"
 
       - name: Build managed loader (Release)
         run: |
           export PATH="$HOME/.dotnet:$PATH"
           SLN="$(pwd)/LimeLoader/"
-          dotnet build LimeLoader/MelonLoader.csproj -c Release -f net8  -p:SolutionDir="$SLN"
-          dotnet build LimeLoader/MelonLoader.csproj -c Release -f net35 -p:SolutionDir="$SLN"
-          dotnet build LimeLoader/MelonLoader.NativeHost/MelonLoader.NativeHost.csproj -c Release -p:SolutionDir="$SLN"
-          dotnet build LimeLoader/Dependencies/SupportModules/Il2Cpp/Il2Cpp.csproj -c Release -p:SolutionDir="$SLN"
-          dotnet build LimeLoader/Dependencies/SupportModules/Mono/Mono.csproj -c Release -p:SolutionDir="$SLN"
-          dotnet build LimeLoader/Dependencies/Il2CppAssemblyGenerator/Il2CppAssemblyGenerator.csproj -c Release -p:SolutionDir="$SLN"
+
+          dotnet build LimeLoader/MelonLoader.csproj \
+            -c Release \
+            -f net8 \
+            -p:SolutionDir="$SLN"
+
+          dotnet build LimeLoader/MelonLoader.csproj \
+            -c Release \
+            -f net35 \
+            -p:SolutionDir="$SLN"
+
+          dotnet build LimeLoader/MelonLoader.NativeHost/MelonLoader.NativeHost.csproj \
+            -c Release \
+            -p:SolutionDir="$SLN"
+
+          dotnet build LimeLoader/Dependencies/SupportModules/Il2Cpp/Il2Cpp.csproj \
+            -c Release \
+            -p:SolutionDir="$SLN"
+
+          dotnet build LimeLoader/Dependencies/SupportModules/Mono/Mono.csproj \
+            -c Release \
+            -p:SolutionDir="$SLN"
+
+          dotnet build LimeLoader/Dependencies/Il2CppAssemblyGenerator/Il2CppAssemblyGenerator.csproj \
+            -c Release \
+            -p:SolutionDir="$SLN"
 
       - name: Build native bootstrap (arm64)
         run: |
           export ANDROID_NDK_HOME="$HOME/ndk/android-ndk-r26d"
           export PATH="$HOME/.cargo/bin:$PATH"
+
           cd LimeLoader/Rust/Bootstrap || cd LimeLoader/Rust
-          cargo ndk -t arm64-v8a -o ../../LimeLoader/jniLibs build --release
+          cargo ndk \
+            -t arm64-v8a \
+            -o ../../LimeLoader/jniLibs \
+            build \
+            --release
 
       - name: Assemble melon_data.zip
         run: |
           cd LimeLoader
+
           rm -rf melon_data
           mkdir -p melon_data
-          if [ -d Output/Release/MelonLoader ]; then cp -r Output/Release/MelonLoader melon_data/MelonLoader; else cp -r Output/Debug/MelonLoader melon_data/MelonLoader; fi
-          if [ -d BaseLibs/dotnet_fixed_gc ]; then cp -r BaseLibs/dotnet_fixed_gc melon_data/dotnet; else mkdir -p melon_data/dotnet; fi
+
+          if [ -d Output/Release/MelonLoader ]; then
+            cp -r Output/Release/MelonLoader melon_data/MelonLoader
+          else
+            cp -r Output/Debug/MelonLoader melon_data/MelonLoader
+          fi
+
+          if [ -d BaseLibs/dotnet_fixed_gc ]; then
+            cp -r BaseLibs/dotnet_fixed_gc melon_data/dotnet
+          else
+            mkdir -p melon_data/dotnet
+          fi
+
           cp -r jniLibs melon_data/native
+
           zip -r melon_data.zip melon_data
           ls -lh melon_data.zip
 
