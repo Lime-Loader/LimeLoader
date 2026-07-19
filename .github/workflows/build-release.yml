@@ -197,6 +197,26 @@ jobs:
             build \
             --release
 
+          # libBootstrap.so is dynamically linked against libdobby.so (the Dobby hooking
+          # library). dobby-sys ships it as a PREBUILT under its crate checkout and cargo-ndk
+          # does NOT copy it, so it must be bundled next to the other .so or libBootstrap.so
+          # fails to dlopen at runtime ("library libdobby.so not found").
+          DOBBY_SO=$(find "${CARGO_HOME:-$HOME/.cargo}/git/checkouts" \
+            -path "*dobby*android/arm64/libdobby.so" 2>/dev/null | head -n 1 || true)
+
+          if [ -z "$DOBBY_SO" ]; then
+            echo "ERROR: libdobby.so not found (libBootstrap.so needs it at runtime)"
+            find "${CARGO_HOME:-$HOME/.cargo}" -iname "libdobby.so" 2>/dev/null || true
+            exit 1
+          fi
+
+          mkdir -p jniLibs/arm64-v8a
+          cp "$DOBBY_SO" jniLibs/arm64-v8a/
+          echo "Bundled libdobby.so from: $DOBBY_SO"
+
+          echo "jniLibs/arm64-v8a:"
+          ls -l jniLibs/arm64-v8a
+
 
       - name: Assemble melon_data.zip
         shell: bash
