@@ -19,10 +19,9 @@ jobs:
           dotnet-version: '9.0.x'
 
       - name: Setup Rust
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable
-          profile: minimal
+          targets: aarch64-linux-android
 
       - name: Install cargo-ndk
         run: cargo install cargo-ndk
@@ -166,28 +165,30 @@ jobs:
           export ANDROID_NDK_HOME="$HOME/ndk/android-ndk-r26d"
           export PATH="$HOME/.cargo/bin:$PATH"
 
-          CARGO_DIR=$(find . -name "Cargo.toml" -type f | grep -i bootstrap | head -n 1 || true)
+          # Guarantee the Android std is present regardless of the toolchain action.
+          rustup target add aarch64-linux-android
 
-          if [ -z "$CARGO_DIR" ]; then
-            CARGO_DIR=$(find . -name "Cargo.toml" -type f | head -n 1 || true)
-          fi
+          # Locate the Cargo *workspace* root (the Cargo.toml that declares [workspace]),
+          # NOT the Bootstrap member — building the workspace produces BOTH crates:
+          #   Rust/Bootstrap  -> libBootstrap.so
+          #   Rust/MelonProxy -> libmain.so   (both are needed)
+          WORKSPACE_TOML=$(grep -rl "^\[workspace\]" --include=Cargo.toml . | head -n 1 || true)
 
-          if [ -z "$CARGO_DIR" ]; then
-            echo "ERROR: No Cargo.toml found"
+          if [ -z "$WORKSPACE_TOML" ]; then
+            echo "ERROR: No workspace Cargo.toml found"
+            find . -name "Cargo.toml" | sort
             exit 1
           fi
 
-          echo "Using Rust project: $CARGO_DIR"
+          WORKSPACE_DIR=$(dirname "$WORKSPACE_TOML")
+          echo "Using Rust workspace: $WORKSPACE_DIR"
 
-          PROJECT_DIR=$(dirname "$CARGO_DIR")
-
+          cd "$WORKSPACE_DIR"
           mkdir -p jniLibs
-
-          cd "$PROJECT_DIR"
 
           cargo ndk \
             -t arm64-v8a \
-            -o "$(pwd)/../../jniLibs" \
+            -o "$(pwd)/jniLibs" \
             build \
             --release
 
@@ -244,31 +245,34 @@ jobs:
           fi
 
 
-          if [ -d jniLibs ]; then
-            cp -r jniLibs melon_data/native
+          # The installer copies *.so DIRECTLY from melon_data/native into lib/arm64-v8a,
+          # preserving each file's path relative to native/. So the .so files must sit
+          # FLAT in native/, not under an arm64-v8a/ subdir (cargo-ndk nests by ABI, which
+          # would otherwise land them at lib/arm64-v8a/arm64-v8a/*.so and fail to load).
+          mkdir -p melon_data/native
+
+          if find jniLibs -name '*.so' | grep -q .; then
+            find jniLibs -name '*.so' -exec cp {} melon_data/native/ \;
           else
-            echo "WARNING: jniLibs missing"
+            echo "WARNING: no .so found in jniLibs"
           fi
 
+          echo "melon_data/native:"
+          ls -l melon_data/native
 
-          zip -r melon_data.zip melon_data
+
+          # Zip from INSIDE melon_data so the archive root holds MelonLoader/ dotnet/ native/
+          # directly. The installer extracts straight into its data dir with no wrapper
+          # folder, and expects those three at the top level.
+          ( cd melon_data && zip -r ../melon_data.zip . )
 
           ls -lh melon_data.zip
 
 
-      - name: Create GitHub release
-        id: create_release
+      - name: Create GitHub release and upload melon_data.zip
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
+          files: melon_data.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
-      - name: Upload melon_data.zip to release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: melon_data.zip
-          asset_name: melon_data.zip
-          asset_content_type: application/zip
