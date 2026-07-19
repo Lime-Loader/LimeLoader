@@ -261,6 +261,34 @@ jobs:
           ls -l melon_data/native
 
 
+          # Bundle the Unity 6 helper assemblies (asset-bundle loading + image conversion,
+          # with the Unity 6 _Injected icall fix) plus Newtonsoft.Json into the net8 runtime
+          # directory. That dir is MelonEnvironment.OurRuntimeDirectory, which is on the
+          # loader's assembly resolve path, so mods can reference these at runtime.
+          RUNTIME_DIR=$(find melon_data/MelonLoader -maxdepth 1 -type d -name "net8" | head -n 1 || true)
+
+          if [ -z "$RUNTIME_DIR" ]; then
+            RUNTIME_DIR="melon_data/MelonLoader/net8"
+            mkdir -p "$RUNTIME_DIR"
+          fi
+
+          for dll in \
+            UnityEngine.Il2CppAssetBundleManager.dll \
+            UnityEngine.Il2CppImageConversionManager.dll \
+            Newtonsoft.Json.dll
+          do
+            if [ -f "BaseLibs/net6/$dll" ]; then
+              cp "BaseLibs/net6/$dll" "$RUNTIME_DIR/"
+              echo "Bundled $dll -> $RUNTIME_DIR"
+            else
+              echo "WARNING: BaseLibs/net6/$dll not found"
+            fi
+          done
+
+          echo "runtime dir ($RUNTIME_DIR):"
+          ls -l "$RUNTIME_DIR"
+
+
           # Zip from INSIDE melon_data so the archive root holds MelonLoader/ dotnet/ native/
           # directly. The installer extracts straight into its data dir with no wrapper
           # folder, and expects those three at the top level.
