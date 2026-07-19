@@ -3,32 +3,65 @@ using System;
 namespace System.Diagnostics.CodeAnalysis
 {
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
-    sealed class MaybeNullWhenAttribute : Attribute
+    public sealed class MaybeNullWhenAttribute : Attribute
     {
         public MaybeNullWhenAttribute(bool returnValue) => ReturnValue = returnValue;
         public bool ReturnValue { get; }
     }
 
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
-    sealed class NotNullWhenAttribute : Attribute
+    public sealed class NotNullWhenAttribute : Attribute
     {
         public NotNullWhenAttribute(bool returnValue) => ReturnValue = returnValue;
         public bool ReturnValue { get; }
     }
 
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.ReturnValue, Inherited = false)]
-    sealed class MaybeNullAttribute : Attribute { }
+    public sealed class MaybeNullAttribute : Attribute { }
 
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.ReturnValue, Inherited = false)]
-    sealed class NotNullAttribute : Attribute { }
+    public sealed class NotNullAttribute : Attribute { }
+
+    [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.ReturnValue, Inherited = false)]
+    public sealed class AllowNullAttribute : Attribute { }
+
+    [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.ReturnValue, Inherited = false)]
+    public sealed class DisallowNullAttribute : Attribute { }
 
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Delegate, Inherited = false)]
-    sealed class DoesNotReturnAttribute : Attribute { }
+    public sealed class DoesNotReturnAttribute : Attribute { }
+
+    [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
+    public sealed class DoesNotReturnIfAttribute : Attribute
+    {
+        public DoesNotReturnIfAttribute(bool parameterValue) => ParameterValue = parameterValue;
+        public bool ParameterValue { get; }
+    }
 
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Parameter | AttributeTargets.ReturnValue, Inherited = false)]
-    sealed class NotNullIfNotNullAttribute : Attribute
+    public sealed class NotNullIfNotNullAttribute : Attribute
     {
         public NotNullIfNotNullAttribute(string parameterName) => ParameterName = parameterName;
         public string ParameterName { get; }
+    }
+
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Constructor, AllowMultiple = true, Inherited = false)]
+    public sealed class MemberNotNullAttribute : Attribute
+    {
+        public MemberNotNullAttribute(string member) => Members = new[] { member };
+        public MemberNotNullAttribute(params string[] members) => Members = members;
+        public string[] Members { get; }
+    }
+
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Constructor, AllowMultiple = true, Inherited = false)]
+    public sealed class MemberNotNullWhenAttribute : Attribute
+    {
+        public MemberNotNullWhenAttribute(bool returnValue, params string[] members)
+        {
+            ReturnValue = returnValue;
+            Members = members;
+        }
+        public bool ReturnValue { get; }
+        public string[] Members { get; }
     }
 }
