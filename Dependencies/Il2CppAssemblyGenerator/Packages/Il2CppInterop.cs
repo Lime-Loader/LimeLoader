@@ -65,22 +65,35 @@ namespace MelonLoader.Il2CppAssemblyGenerator.Packages
                 .Select(f => f.Assembly)
                 .ToList();
             
+            // Unity base libs are optional: for bleeding-edge Unity versions they may not be hosted,
+            // in which case UnityDependencies leaves an empty/missing directory. Only use them if
+            // they're actually present, otherwise Il2CppInterop falls back to metadata-only generation.
+            string unityBaseLibsDir = Core.unitydependencies.Destination;
+            bool hasUnityBaseLibs = !string.IsNullOrEmpty(unityBaseLibsDir)
+                && Directory.Exists(unityBaseLibsDir)
+                && Directory.EnumerateFiles(unityBaseLibsDir, "*.dll").Any();
+
+            if (!hasUnityBaseLibs)
+                Core.Logger.Warning("Generating interop assemblies without Unity base libraries.");
+
             var opts = new GeneratorOptions()
             {
                 GameAssemblyPath = Core.GameAssemblyPath,
                 Source = inputAssemblies,
                 OutputDir = OutputFolder,
-                UnityBaseLibsDir = Core.unitydependencies.Destination,
+                UnityBaseLibsDir = hasUnityBaseLibs ? unityBaseLibsDir : null,
                 ObfuscatedNamesRegex = string.IsNullOrEmpty(Core.deobfuscationRegex.Regex) ? null : new Regex(Core.deobfuscationRegex.Regex),
                 Parallel = true,
                 Il2CppPrefixMode = GeneratorOptions.PrefixMode.OptOut,
             };
-            
-            //Inform cecil of the unity base libs
+
+            //Inform cecil of the unity base libs (restored during cleanup below)
             var trusted = (string) AppDomain.CurrentDomain.GetData("TRUSTED_PLATFORM_ASSEMBLIES");
-            var allUnityDlls = string.Join(Path.PathSeparator, Directory.GetFiles(Core.unitydependencies.Destination, "*.dll", SearchOption.TopDirectoryOnly));
-            // var allDumpedDlls = string.Join(Path.PathSeparator, Directory.GetFiles(Core.dumper.OutputFolder, "*.dll", SearchOption.TopDirectoryOnly));
-            AppDomain.CurrentDomain.SetData("TRUSTED_PLATFORM_ASSEMBLIES", trusted + Path.PathSeparator + allUnityDlls);
+            if (hasUnityBaseLibs)
+            {
+                var allUnityDlls = string.Join(Path.PathSeparator, Directory.GetFiles(unityBaseLibsDir, "*.dll", SearchOption.TopDirectoryOnly));
+                AppDomain.CurrentDomain.SetData("TRUSTED_PLATFORM_ASSEMBLIES", trusted + Path.PathSeparator + allUnityDlls);
+            }
 
             if (!string.IsNullOrEmpty(Core.deobfuscationMap.Version))
             {
