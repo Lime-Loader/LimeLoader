@@ -60,8 +60,10 @@
   </ItemGroup>
   -->
 
-  <!-- Include attribute stubs only when the BCL does not provide them (older TFMs) -->
+  <!-- Include attribute stubs only when the BCL does not provide them (older TFMs).
+       Remove the SDK default Compile item first to avoid duplicate-inclusion errors. -->
   <ItemGroup Condition="'$(BclHasOobImpls)' != 'true'">
+    <Compile Remove="System/Diagnostics/CodeAnalysis/NullableAttributes.cs" />
     <Compile Include="System/Diagnostics/CodeAnalysis/NullableAttributes.cs" />
   </ItemGroup>
 
