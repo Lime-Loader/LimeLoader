@@ -129,7 +129,33 @@ public static class APKAssetManager
         if (assetManager?.Valid() ?? false)
             return;
 
+        // Preferred: resolve the AssetManager from the app Context via
+        // android.app.ActivityThread.currentApplication(). ActivityThread is a framework class that
+        // resolves on any classloader, so this works even when the loader runs on a .NET thread
+        // whose classloader is the system one. FindClass("com/unity3d/player/UnityPlayer") fails
+        // there with ClassNotFoundException because the app's dex isn't on that classloader, and the
+        // resulting pending exception makes the next JNI call a fatal CheckJNI abort on Quest/etc.
+        JObject application = GetCurrentApplication();
+        if (application != null && application.Valid())
+        {
+            JObject appAssetManager = JNI.CallObjectMethod<JObject>(application, JNI.GetMethodID(JNI.GetObjectClass(application), "getAssets", "()Landroid/content/res/AssetManager;"));
+            HandleException();
+            if (appAssetManager != null && appAssetManager.Valid())
+            {
+                assetManager = appAssetManager;
+                return;
+            }
+        }
+
+        // Fallback: the classic UnityPlayer.currentActivity path (works when a Java frame carrying
+        // the app classloader is on the stack). FindClass is hardened to not abort if it's missing.
         JClass unityClass = JNI.FindClass("com/unity3d/player/UnityPlayer");
+        if (unityClass == null || !unityClass.Valid())
+        {
+            HandleException();
+            return;
+        }
+
         JFieldID activityFieldId = JNI.GetStaticFieldID(unityClass, "currentActivity", "Landroid/app/Activity;");
         JObject currentActivityObj = JNI.GetStaticObjectField<JObject>(unityClass, activityFieldId);
         JObject assetManagerObj = JNI.CallObjectMethod<JObject>(currentActivityObj, JNI.GetMethodID(JNI.GetObjectClass(currentActivityObj), "getAssets", "()Landroid/content/res/AssetManager;"));
@@ -137,6 +163,23 @@ public static class APKAssetManager
         HandleException();
 
         assetManager = assetManagerObj;
+    }
+
+    // Returns the app's Application object (a Context) via android.app.ActivityThread, which is
+    // resolvable regardless of the calling thread's classloader. Null if it can't be obtained.
+    public static JObject GetCurrentApplication()
+    {
+        JClass activityThreadClass = JNI.FindClass("android/app/ActivityThread");
+        if (activityThreadClass == null || !activityThreadClass.Valid())
+        {
+            HandleException();
+            return null;
+        }
+
+        JMethodID currentApplicationMethod = JNI.GetStaticMethodID(activityThreadClass, "currentApplication", "()Landroid/app/Application;");
+        JObject application = JNI.CallStaticObjectMethod<JObject>(activityThreadClass, currentApplicationMethod);
+        HandleException();
+        return application;
     }
 
     public class APKAssetStream : Stream, IDisposable

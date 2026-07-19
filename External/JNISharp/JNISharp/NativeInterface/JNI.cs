@@ -121,6 +121,17 @@ public unsafe static partial class JNI
 
                 Marshal.FreeHGlobal(nameAnsi);
 
+                // FindClass returns null and leaves a pending exception (e.g. ClassNotFoundException)
+                // when the class isn't visible to the current thread's classloader. Handing that off
+                // to NewGlobalRef is a fatal CheckJNI error ("NewGlobalRef called with pending
+                // exception"), so clear it and return an invalid (null-handle) class instead. Not
+                // cached, so a later call from a thread with the right classloader can still succeed.
+                if (res == IntPtr.Zero || ExceptionCheck())
+                {
+                    ExceptionClear();
+                    return new JClass() { Handle = IntPtr.Zero, ReferenceType = JNI.ReferenceType.Local };
+                }
+
                 using JClass local = new() { Handle = res, ReferenceType = JNI.ReferenceType.Local };
                 JClass global = NewGlobalRef<JClass>(local);
                 ClassCache.Add(name, global);

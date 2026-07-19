@@ -182,10 +182,17 @@ namespace MelonLoader.Il2CppAssemblyGenerator
 
         private string GetLibIl2CppPath()
         {
-            JClass unityClass = JNI.FindClass("com/unity3d/player/UnityPlayer");
-            JFieldID activityFieldId = JNI.GetStaticFieldID(unityClass, "currentActivity", "Landroid/app/Activity;");
-            JObject currentActivityObj = JNI.GetStaticObjectField<JObject>(unityClass, activityFieldId);
-            JObject applicationInfoObj = JNI.CallObjectMethod<JObject>(currentActivityObj, JNI.GetMethodID(JNI.GetObjectClass(currentActivityObj), "getApplicationInfo", "()Landroid/content/pm/ApplicationInfo;"));
+            // Use the app Context (via ActivityThread) rather than FindClass("com/unity3d/player/
+            // UnityPlayer"), which throws ClassNotFoundException on the .NET thread's classloader
+            // and would fatally abort the process on CheckJNI runtimes (e.g. Quest).
+            JObject application = APKAssetManager.GetCurrentApplication();
+            if (application == null || !application.Valid())
+            {
+                MelonLogger.Msg("Unable to get application context for libil2cpp path.");
+                return "";
+            }
+
+            JObject applicationInfoObj = JNI.CallObjectMethod<JObject>(application, JNI.GetMethodID(JNI.GetObjectClass(application), "getApplicationInfo", "()Landroid/content/pm/ApplicationInfo;"));
             JFieldID filesFieldId = JNI.GetFieldID(JNI.GetObjectClass(applicationInfoObj), "nativeLibraryDir", "Ljava/lang/String;");
             JString pathJString = JNI.GetObjectField<JString>(applicationInfoObj, filesFieldId);
 
