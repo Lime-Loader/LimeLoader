@@ -30,94 +30,231 @@ jobs:
       - name: Download Android NDK r26d
         run: |
           mkdir -p $HOME/ndk
-          curl -fL -o /tmp/android-ndk-r26d.zip https://dl.google.com/android/repository/android-ndk-r26d-linux.zip
+
+          curl -fL \
+            -o /tmp/android-ndk-r26d.zip \
+            https://dl.google.com/android/repository/android-ndk-r26d-linux.zip
+
           unzip -q /tmp/android-ndk-r26d.zip -d $HOME/ndk
+
           echo "ANDROID_NDK_HOME=$HOME/ndk/android-ndk-r26d" >> $GITHUB_ENV
 
       - name: Verify repository layout
         run: |
+          echo "Current directory:"
           pwd
-          ls
-          ls External
-          ls External/MonoMod/src/MonoMod.RuntimeDetour
+
+          echo
+          echo "Root contents:"
+          ls -la
+
+          echo
+          echo "All C# projects:"
+          find . -name "*.csproj" | sort
+
+          echo
+          echo "Rust projects:"
+          find . -name "Cargo.toml" | sort
+
 
       - name: Build MonoMod (Release)
+        shell: bash
         run: |
+          set -e
+
           export PATH="$HOME/.dotnet:$PATH"
           SLN="$(pwd)/"
 
-          dotnet build "$(pwd)/External/MonoMod/src/MonoMod.RuntimeDetour/MonoMod.RuntimeDetour.csproj" \
-            -c Release \
-            -p:SolutionDir="$SLN"
+          find_project()
+          {
+            local name="$1"
+            local result
 
-          dotnet build "$(pwd)/External/MonoMod/src/MonoMod.Patcher/MonoMod.Patcher.csproj" \
-            -c Release \
-            -p:SolutionDir="$SLN"
+            result=$(find . -name "$name" -type f | head -n 1 || true)
+
+            if [ -z "$result" ]; then
+              echo "ERROR: Missing project: $name"
+              find . -name "*.csproj" | sort
+              exit 1
+            fi
+
+            echo "$result"
+          }
+
+          build()
+          {
+            echo "Building $1"
+
+            dotnet build "$1" \
+              -c Release \
+              -p:SolutionDir="$SLN"
+          }
+
+          RUNTIME_DETOUR=$(find_project "MonoMod.RuntimeDetour.csproj")
+          PATCHER=$(find_project "MonoMod.Patcher.csproj")
+
+          build "$RUNTIME_DETOUR"
+          build "$PATCHER"
+
 
       - name: Build managed loader (Release)
+        shell: bash
         run: |
+          set -e
+
           export PATH="$HOME/.dotnet:$PATH"
           SLN="$(pwd)/"
 
-          dotnet build MelonLoader.csproj \
-            -c Release \
-            -f net8 \
-            -p:SolutionDir="$SLN"
+          find_project()
+          {
+            local name="$1"
+            local result
 
-          dotnet build MelonLoader.csproj \
-            -c Release \
-            -f net35 \
-            -p:SolutionDir="$SLN"
+            result=$(find . -name "$name" -type f | head -n 1 || true)
 
-          dotnet build MelonLoader.NativeHost/MelonLoader.NativeHost.csproj \
-            -c Release \
-            -p:SolutionDir="$SLN"
+            if [ -z "$result" ]; then
+              echo "ERROR: Missing project: $name"
+              echo "Available projects:"
+              find . -name "*.csproj" | sort
+              exit 1
+            fi
 
-          dotnet build Dependencies/SupportModules/Il2Cpp/Il2Cpp.csproj \
-            -c Release \
-            -p:SolutionDir="$SLN"
+            echo "$result"
+          }
 
-          dotnet build Dependencies/SupportModules/Mono/Mono.csproj \
-            -c Release \
-            -p:SolutionDir="$SLN"
+          build()
+          {
+            echo
+            echo "================================"
+            echo "Building $1"
+            echo "================================"
 
-          dotnet build Dependencies/Il2CppAssemblyGenerator/Il2CppAssemblyGenerator.csproj \
-            -c Release \
-            -p:SolutionDir="$SLN"
+            dotnet build "$1" \
+              -c Release \
+              -p:SolutionDir="$SLN" \
+              "${@:2}"
+          }
+
+
+          MELONLOADER=$(find_project "MelonLoader.csproj")
+
+          build "$MELONLOADER" -f net8
+          build "$MELONLOADER" -f net35
+
+
+          NATIVEHOST=$(find_project "MelonLoader.NativeHost.csproj")
+          build "$NATIVEHOST"
+
+
+          IL2CPP=$(find_project "Il2Cpp.csproj")
+          build "$IL2CPP"
+
+
+          MONO=$(find_project "Mono.csproj")
+          build "$MONO"
+
+
+          ASSEMBLYGEN=$(find_project "Il2CppAssemblyGenerator.csproj")
+          build "$ASSEMBLYGEN"
+
 
       - name: Build native bootstrap (arm64)
+        shell: bash
         run: |
+          set -e
+
           export ANDROID_NDK_HOME="$HOME/ndk/android-ndk-r26d"
           export PATH="$HOME/.cargo/bin:$PATH"
 
-          cd Rust/Bootstrap || cd Rust
+          CARGO_DIR=$(find . -name "Cargo.toml" -type f | grep -i bootstrap | head -n 1 || true)
+
+          if [ -z "$CARGO_DIR" ]; then
+            CARGO_DIR=$(find . -name "Cargo.toml" -type f | head -n 1 || true)
+          fi
+
+          if [ -z "$CARGO_DIR" ]; then
+            echo "ERROR: No Cargo.toml found"
+            exit 1
+          fi
+
+          echo "Using Rust project: $CARGO_DIR"
+
+          PROJECT_DIR=$(dirname "$CARGO_DIR")
+
+          mkdir -p jniLibs
+
+          cd "$PROJECT_DIR"
+
           cargo ndk \
             -t arm64-v8a \
-            -o ../../jniLibs \
+            -o "$(pwd)/../../jniLibs" \
             build \
             --release
 
+
       - name: Assemble melon_data.zip
+        shell: bash
         run: |
+          set -e
+
           rm -rf melon_data
           mkdir -p melon_data
 
-          if [ -d Output/Release/MelonLoader ]; then
-            cp -r Output/Release/MelonLoader melon_data/MelonLoader
-          else
-            cp -r Output/Debug/MelonLoader melon_data/MelonLoader
+
+          echo "Searching for MelonLoader output..."
+
+          LOADER_DIR=$(find . \
+            -type d \
+            -path "*/Release/MelonLoader" \
+            | head -n 1 || true)
+
+
+          if [ -z "$LOADER_DIR" ]; then
+            LOADER_DIR=$(find . \
+              -type d \
+              -path "*/Debug/MelonLoader" \
+              | head -n 1 || true)
           fi
 
-          if [ -d BaseLibs/dotnet_fixed_gc ]; then
-            cp -r BaseLibs/dotnet_fixed_gc melon_data/dotnet
+
+          if [ -z "$LOADER_DIR" ]; then
+            echo "ERROR: Could not locate built MelonLoader directory"
+            find . -type d | grep -i melon || true
+            exit 1
+          fi
+
+
+          echo "Copying:"
+          echo "$LOADER_DIR"
+
+          cp -r "$LOADER_DIR" melon_data/MelonLoader
+
+
+          DOTNET_FIXED=$(find . \
+            -type d \
+            -name "dotnet_fixed_gc" \
+            | head -n 1 || true)
+
+
+          if [ -n "$DOTNET_FIXED" ]; then
+            mkdir -p melon_data/dotnet
+            cp -r "$DOTNET_FIXED"/* melon_data/dotnet/
           else
             mkdir -p melon_data/dotnet
           fi
 
-          cp -r jniLibs melon_data/native
+
+          if [ -d jniLibs ]; then
+            cp -r jniLibs melon_data/native
+          else
+            echo "WARNING: jniLibs missing"
+          fi
+
 
           zip -r melon_data.zip melon_data
+
           ls -lh melon_data.zip
+
 
       - name: Create GitHub release
         id: create_release
@@ -126,6 +263,7 @@ jobs:
           tag_name: ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: Upload melon_data.zip to release
         uses: actions/upload-release-asset@v1
