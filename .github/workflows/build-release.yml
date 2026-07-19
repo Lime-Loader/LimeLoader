@@ -218,6 +218,46 @@ jobs:
           ls -l jniLibs/arm64-v8a
 
 
+      - name: Fetch .NET 8 Android runtime
+        shell: bash
+        run: |
+          set -e
+
+          # The bootstrap loads a self-contained .NET 8.0.6 android-arm64 CoreCLR runtime
+          # from <app>/dotnet at runtime:
+          #   dotnet/host/fxr/8.0.6/libhostfxr.so
+          #   dotnet/shared/Microsoft.NETCore.App/8.0.6/{libcoreclr.so, libhostpolicy.so, ...}
+          # This is a large prebuilt that LemonLoader ships in its release melon_data.zip; its
+          # libcoreclr.so is the GC-fixed build (byte-identical to BaseLibs/dotnet_fixed_gc),
+          # so we reuse that runtime and then overlay the repo's own GC-fixed libcoreclr so
+          # LimeLoader controls the patch.
+          RUNTIME_URL="https://github.com/LemonLoader/MelonLoader/releases/download/0.6.5.1/melon_data.zip"
+
+          curl -fL --retry 3 -o /tmp/lemon_melon_data.zip "$RUNTIME_URL"
+
+          rm -rf /tmp/lemon_extract dotnet-runtime
+          unzip -q /tmp/lemon_melon_data.zip "dotnet/*" -d /tmp/lemon_extract
+
+          mkdir -p dotnet-runtime
+          cp -a /tmp/lemon_extract/dotnet/. dotnet-runtime/
+
+          # Overlay the repo's GC-fixed libcoreclr.so (source of truth for the GC patch).
+          GC_CORECLR=$(find . -type f -path "*dotnet_fixed_gc/libcoreclr.so" | head -n 1 || true)
+          if [ -n "$GC_CORECLR" ]; then
+            cp "$GC_CORECLR" dotnet-runtime/shared/Microsoft.NETCore.App/8.0.6/libcoreclr.so
+            echo "Overlaid GC-fixed libcoreclr.so from: $GC_CORECLR"
+          fi
+
+          if [ ! -f dotnet-runtime/host/fxr/8.0.6/libhostfxr.so ]; then
+            echo "ERROR: dotnet-runtime/host/fxr/8.0.6/libhostfxr.so missing"
+            find dotnet-runtime -maxdepth 3 -type d | sort
+            exit 1
+          fi
+
+          echo "dotnet-runtime ready:"
+          find dotnet-runtime -maxdepth 3 -name "libhostfxr.so" -o -maxdepth 3 -name "libcoreclr.so"
+
+
       - name: Assemble melon_data.zip
         shell: bash
         run: |
@@ -256,18 +296,18 @@ jobs:
           cp -r "$LOADER_DIR" melon_data/MelonLoader
 
 
-          DOTNET_FIXED=$(find . \
-            -type d \
-            -name "dotnet_fixed_gc" \
-            | head -n 1 || true)
-
-
-          if [ -n "$DOTNET_FIXED" ]; then
-            mkdir -p melon_data/dotnet
-            cp -r "$DOTNET_FIXED"/* melon_data/dotnet/
-          else
-            mkdir -p melon_data/dotnet
+          # Full .NET 8.0.6 runtime prepared by the "Fetch .NET 8 Android runtime" step
+          # (host/fxr + shared/Microsoft.NETCore.App). Do NOT use BaseLibs/dotnet_fixed_gc
+          # directly here — that folder is only the GC-patched libcoreclr.so plus build-time
+          # static (.a) archives, not a loadable runtime (no hostfxr), which makes the
+          # bootstrap fail with "Failed to load hostfxr".
+          if [ ! -d dotnet-runtime ]; then
+            echo "ERROR: dotnet-runtime not found (Fetch .NET 8 Android runtime step must run first)"
+            exit 1
           fi
+
+          mkdir -p melon_data/dotnet
+          cp -a dotnet-runtime/. melon_data/dotnet/
 
 
           # The installer copies *.so DIRECTLY from melon_data/native into lib/arm64-v8a,
