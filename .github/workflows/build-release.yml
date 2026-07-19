@@ -322,6 +322,17 @@ jobs:
             echo "WARNING: no .so found in jniLibs"
           fi
 
+          # OpenSSL (libssl/libcrypto) that the bundled .NET runtime dlopens for its crypto
+          # stack. Without them the runtime aborts with "No usable version of libssl was
+          # found" the first time anything hashes (MelonUtils' static ctor hits it immediately).
+          OPENSSL_DIR=$(find . -type d -path "*BaseLibs/openssl" | head -n 1 || true)
+          if [ -n "$OPENSSL_DIR" ]; then
+            cp "$OPENSSL_DIR"/*.so melon_data/native/
+            echo "Bundled OpenSSL libs from: $OPENSSL_DIR"
+          else
+            echo "WARNING: BaseLibs/openssl not found (crypto will fail at runtime)"
+          fi
+
           echo "melon_data/native:"
           ls -l melon_data/native
 
