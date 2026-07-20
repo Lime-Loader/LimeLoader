@@ -19,15 +19,16 @@ public unsafe static partial class JNI
     // fatal CheckJNI abort ("using JNIEnv* from thread main ... in call to DeleteGlobalRef"). So ref
     // cleanup that runs off this thread is deferred and drained on the main thread.
     //
-    // We identify the main thread by pthread_self(), NOT Thread.CurrentThread.ManagedThreadId: on this
-    // runtime the finalizer thread reports ManagedThreadId == 1 (identical to main), so managed ids
-    // cannot distinguish it. pthread_self() is per-OS-thread and matches ART/CheckJNI's own view.
-    [DllImport("libc", EntryPoint = "pthread_self")]
-    private static extern IntPtr PthreadSelf();
+    // We identify the main thread by the kernel thread id (gettid), NOT ManagedThreadId - on this
+    // runtime the finalizer thread reports ManagedThreadId == 1 (identical to main). gettid() returns
+    // the per-OS-thread kernel tid, the exact value ART/CheckJNI prints ("thread ... tid=NNNNN"), so
+    // it can never collide between two live threads.
+    [DllImport("libc", EntryPoint = "gettid")]
+    private static extern int Gettid();
 
-    private static IntPtr _mainThread;
-    private static bool _mainThreadCaptured;
-    private static bool OnMainThread() => !_mainThreadCaptured || PthreadSelf() == _mainThread;
+    private static int _mainTid;
+    private static volatile bool _mainThreadCaptured;
+    private static bool OnMainThread() => !_mainThreadCaptured || Gettid() == _mainTid;
 
     private struct PendingRef { public IntPtr Handle; public byte Kind; }
     private static readonly Queue<PendingRef> _pendingRefDeletes = new Queue<PendingRef>();
@@ -50,7 +51,7 @@ public unsafe static partial class JNI
             }
 
             // On the main thread, opportunistically release refs whose finalizers ran elsewhere.
-            if (_hasPendingRefDeletes && _mainThreadCaptured && PthreadSelf() == _mainThread)
+            if (_hasPendingRefDeletes && _mainThreadCaptured && Gettid() == _mainTid)
                 DrainPendingRefDeletes();
 
             return _env;
@@ -59,9 +60,9 @@ public unsafe static partial class JNI
 
     public static IntPtr JavaVMPtr => (IntPtr)VM;
 
-    // pthread handle of the thread JNI was initialized on (the only thread ref deletion runs on).
-    // 0 until Initialize() runs. Exposed for a startup diagnostic so logs confirm this build is live.
-    public static long MainThreadId => (long)_mainThread;
+    // Kernel tid of the thread JNI was initialized on (the only thread ref deletion runs on). 0 until
+    // Initialize() runs. Exposed for a startup diagnostic; it matches ART's "main" tid in a crash dump.
+    public static long MainThreadId => _mainTid;
     internal static Dictionary<string, JClass> ClassCache { get; set; } = new();
 
     // Deletes a JNI reference, or defers it if we are not on the main thread. Ref deletion must use
@@ -133,8 +134,8 @@ public unsafe static partial class JNI
         {
             VM = (JavaVM*)vmPtr;
             // The first Initialize call comes from MelonLoader.Core on the ART/Unity main thread.
-            // Record its native pthread as the only thread on which JNI ref deletion is safe.
-            _mainThread = PthreadSelf();
+            // Record its kernel tid as the only thread on which JNI ref deletion is safe.
+            _mainTid = Gettid();
             _mainThreadCaptured = true;
         }
         else if (VM == null)
