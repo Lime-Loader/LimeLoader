@@ -60,6 +60,16 @@ namespace MelonLoader
                 Pastel.ConsoleExtensions.Disable();
 
             Fixes.UnhandledException.Install(AppDomain.CurrentDomain);
+            // [DIAG] Pin down the clean process exit that happens right after Start(): log when the
+            // runtime tears down and the managed stack that triggered it (empty => native/host exit).
+            AppDomain.CurrentDomain.ProcessExit += (_, _) =>
+            {
+                try { MelonLogger.WriteLogToFile($"[DIAG] ProcessExit fired. Managed stack:\n{Environment.StackTrace}"); } catch { }
+            };
+            AppDomain.CurrentDomain.UnhandledException += (_, e) =>
+            {
+                try { MelonLogger.WriteLogToFile($"[DIAG] UnhandledException (terminating={e.IsTerminating}): {e.ExceptionObject}"); } catch { }
+            };
             Fixes.ServerCertificateValidation.Install();
             Assertions.LemonAssertMapping.Setup();
 
@@ -161,16 +171,21 @@ namespace MelonLoader
             MelonEvents.OnPreSupportModule.Invoke();
             if (!SupportModule.Setup())
                 return 1;
+            MelonLogger.WriteLogToFile("[DIAG] Start: after SupportModule.Setup");
 
             AddUnityDebugLog();
+            MelonLogger.WriteLogToFile("[DIAG] Start: after AddUnityDebugLog");
 
 #if NET6_0_OR_GREATER
             RegisterTypeInIl2Cpp.SetReady();
             RegisterTypeInIl2CppWithInterfaces.SetReady();
 #endif
+            MelonLogger.WriteLogToFile("[DIAG] Start: after RegisterTypeInIl2Cpp.SetReady");
 
             MelonEvents.MelonHarmonyInit.Invoke();
+            MelonLogger.WriteLogToFile("[DIAG] Start: after MelonHarmonyInit");
             MelonEvents.OnApplicationStart.Invoke();
+            MelonLogger.WriteLogToFile("[DIAG] Start: after OnApplicationStart - Start() complete");
 
             return 0;
         }
