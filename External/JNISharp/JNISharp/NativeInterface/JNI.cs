@@ -34,6 +34,24 @@ public unsafe static partial class JNI
     public static IntPtr JavaVMPtr => (IntPtr)VM;
     internal static Dictionary<string, JClass> ClassCache { get; set; } = new();
 
+    // Returns the JNIEnv* belonging to the CURRENT thread, attaching it if needed. Unlike the
+    // cached [ThreadStatic] Env, this always asks the JVM, which is required when a JNI call runs
+    // on a thread the runtime reused or attached elsewhere - most notably the GC finalizer thread,
+    // where JObject finalizers release global refs. Passing a JNIEnv* that belongs to a different
+    // thread to Delete*Ref is a fatal CheckJNI error ("using JNIEnv* from thread ...").
+    internal static unsafe JNIEnv* CurrentThreadEnv()
+    {
+        if (VM == null)
+            return _env;
+
+        VM->Functions->GetEnv(VM, out IntPtr penv, (int)Version.V1_6);
+        if (penv != IntPtr.Zero)
+            return (JNIEnv*)penv;
+
+        VM->Functions->AttachCurrentThread(VM, out JNIEnv* attached, IntPtr.Zero);
+        return attached;
+    }
+
     public static void Initialize(IntPtr vmPtr)
     {
         if (VM == null && vmPtr != IntPtr.Zero)
@@ -270,7 +288,11 @@ public unsafe static partial class JNI
             if (!gref.Valid())
                 return;
 
-            Env->Functions->DeleteGlobalRef(Env, gref.Handle);
+            JNIEnv* env = CurrentThreadEnv();
+            if (env == null)
+                return;
+
+            env->Functions->DeleteGlobalRef(env, gref.Handle);
         }
     }
 
@@ -294,7 +316,11 @@ public unsafe static partial class JNI
             if (!lref.Valid())
                 return;
 
-            Env->Functions->DeleteLocalRef(Env, lref.Handle);
+            JNIEnv* env = CurrentThreadEnv();
+            if (env == null)
+                return;
+
+            env->Functions->DeleteLocalRef(env, lref.Handle);
         }
     }
 
@@ -1419,7 +1445,14 @@ public unsafe static partial class JNI
     {
         unsafe
         {
-            Env->Functions->DeleteWeakGlobalRef(Env, obj.Handle);
+            if (obj == null || !obj.Valid())
+                return;
+
+            JNIEnv* env = CurrentThreadEnv();
+            if (env == null)
+                return;
+
+            env->Functions->DeleteWeakGlobalRef(env, obj.Handle);
         }
     }
 
