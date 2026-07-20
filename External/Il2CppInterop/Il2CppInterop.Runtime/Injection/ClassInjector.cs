@@ -59,9 +59,14 @@ public class RegisterTypeOptions
 {
     public static readonly RegisterTypeOptions Default = new();
 
-    public bool LogSuccess { get; init; } = true;
-    public Func<Type, Type[]>? InterfacesResolver { get; init; } = null;
-    public Il2CppInterfaceCollection? Interfaces { get; init; } = null;
+    // Plain setters (not `init`): MelonLoader's Il2CppInteropFixes detours RegisterTypeInIl2Cpp, and
+    // Harmony/MonoMod copies that method's IL - which assigns these via an object initializer. An
+    // `init` setter carries a modreq(IsExternalInit) that MonoMod drops when re-emitting the call,
+    // yielding an unresolvable set_LogSuccess(bool) -> MissingMethodException, so Il2CppInteropFixes
+    // fails to install and the unpatched (buggy) type-registration path runs instead.
+    public bool LogSuccess { get; set; } = true;
+    public Func<Type, Type[]>? InterfacesResolver { get; set; } = null;
+    public Il2CppInterfaceCollection? Interfaces { get; set; } = null;
 }
 
 public static unsafe partial class ClassInjector
