@@ -58,6 +58,28 @@ namespace MelonLoader.Il2CppAssemblyGenerator
         {
             Config.Initialize();
 
+            // Fast path: compare the GameAssembly hash BEFORE any network/tool setup. When the interop
+            // assemblies are already up to date (the normal case on Android, which ships pre-generated
+            // assemblies), skip RemoteAPI + all package setup entirely. Doing that work every launch
+            // stalled Unity's main thread for seconds during the first scene load - and a slow/absent
+            // network on the RemoteAPI call could hang it far longer - which fed the surface-loss render
+            // crash on Quest / Unity 6. None of it is needed unless we actually regenerate.
+            string CurrentGameAssemblyHash;
+            Logger.Msg("Checking GameAssembly...");
+            MelonDebug.Msg($"Last GameAssembly Hash: {Config.Values.GameAssemblyHash}");
+            MelonDebug.Msg($"Current GameAssembly Hash: {CurrentGameAssemblyHash = MelonUtils.ComputeSimpleSHA512Hash(GameAssemblyPath)}");
+
+            if (string.IsNullOrEmpty(Config.Values.GameAssemblyHash)
+                    || !Config.Values.GameAssemblyHash.Equals(CurrentGameAssemblyHash))
+                AssemblyGenerationNeeded = true;
+
+            if (!AssemblyGenerationNeeded)
+            {
+                Logger.Msg("Assembly is up to date. No Generation Needed.");
+                return 0;
+            }
+            Logger.Msg("Assembly Generation Needed!");
+
             if (!MelonLaunchOptions.Il2CppAssemblyGenerator.OfflineMode)
                 RemoteAPI.Contact();
 
@@ -88,22 +110,6 @@ namespace MelonLoader.Il2CppAssemblyGenerator
                 return 1;
 
             deobfuscationRegex.Setup();
-
-            string CurrentGameAssemblyHash;
-            Logger.Msg("Checking GameAssembly...");
-            MelonDebug.Msg($"Last GameAssembly Hash: {Config.Values.GameAssemblyHash}");
-            MelonDebug.Msg($"Current GameAssembly Hash: {CurrentGameAssemblyHash = MelonUtils.ComputeSimpleSHA512Hash(GameAssemblyPath)}");
-
-            if (string.IsNullOrEmpty(Config.Values.GameAssemblyHash)
-                    || !Config.Values.GameAssemblyHash.Equals(CurrentGameAssemblyHash))
-                AssemblyGenerationNeeded = true;
-
-            if (!AssemblyGenerationNeeded)
-            {
-                Logger.Msg("Assembly is up to date. No Generation Needed.");
-                return 0;
-            }
-            Logger.Msg("Assembly Generation Needed!");
 
             if (!MelonLaunchOptions.Il2CppAssemblyGenerator.OfflineMode)
             {
