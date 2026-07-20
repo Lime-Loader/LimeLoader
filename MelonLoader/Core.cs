@@ -159,7 +159,12 @@ namespace MelonLoader
         internal static int PreStart()
         {
             MelonEvents.OnApplicationEarlyStart.Invoke();
-            return PreSetup();
+            int result = PreSetup();
+#if NET6_0_OR_GREATER
+            if (result == 0)
+                PreloadIl2CppAssemblies();
+#endif
+            return result;
         }
 
         private static int PreSetup()
@@ -171,6 +176,36 @@ namespace MelonLoader
 
             return _success ? 0 : 1;
         }
+
+#if NET6_0_OR_GREATER
+        // Pre-load the generated il2cpp interop assemblies now - PreStart runs during il2cpp_init,
+        // before Unity's first scene renders. Otherwise the support module loads all ~144 DLLs during
+        // the scene-change hook, stalling the Unity main thread at the render-critical moment, which
+        // crashed Unity 6's Vulkan framebuffer setup on Quest. Assembly.LoadFrom only reads metadata
+        // (il2cpp binding stays lazy), so this is safe to do early and makes the support module's own
+        // LoadFrom loop effectively a no-op.
+        private static void PreloadIl2CppAssemblies()
+        {
+            try
+            {
+                string dir = MelonEnvironment.Il2CppAssembliesDirectory;
+                if (!Directory.Exists(dir))
+                    return;
+
+                int loaded = 0;
+                foreach (string file in Directory.GetFiles(dir, "*.dll"))
+                {
+                    try { Assembly.LoadFrom(file); loaded++; }
+                    catch { }
+                }
+                MelonLogger.Msg($"Preloaded {loaded} Il2Cpp interop assemblies");
+            }
+            catch (Exception ex)
+            {
+                MelonDebug.Msg($"Il2Cpp interop assembly preload failed: {ex}");
+            }
+        }
+#endif
 
         internal static int Start()
         {

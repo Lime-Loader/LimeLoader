@@ -47,7 +47,8 @@ fn detour_inner(
         
         debug!("Mono thread reset")?;
 
-        base_assembly::pre_start()?;
+        // pre_start (generator + interop assembly pre-load) already ran during il2cpp_init so the
+        // heavy loading is off the render-critical path; only the fast type injection runs here.
         base_assembly::start()?;
     }
 

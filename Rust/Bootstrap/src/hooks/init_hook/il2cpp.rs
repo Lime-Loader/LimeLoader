@@ -43,6 +43,14 @@ fn detour_inner(name: *const c_char) -> Result<*mut Il2CppDomain, DynErr> {
 
     crate::base_assembly::init(crate::runtime!()?)?;
 
+    // Run pre-start (il2cpp assembly generator check + interop assembly pre-load) HERE, right after
+    // il2cpp is up, instead of deferring it to the first scene change. The generator only needs
+    // libil2cpp (already available) and the pre-load is pure managed assembly loading - neither needs
+    // Unity's scene. Getting that heavy work done before Unity renders its first frame keeps the
+    // render-critical scene-change hook from stalling the main thread, which crashed Unity 6's Vulkan
+    // framebuffer setup on Quest. Only the fast type injection (start) stays on the scene-change hook.
+    crate::base_assembly::pre_start()?;
+
     debug!("Detaching hook from il2cpp_init")?;
     trampoline.unhook()?;
     
