@@ -1,6 +1,11 @@
-﻿#if NETFRAMEWORK
-#define HAS_UNMANAGED_METHODSIGHELPER
-#endif
+﻿// NOTE (LimeLoader): HAS_UNMANAGED_METHODSIGHELPER is intentionally never defined.
+// The hard reference SignatureHelper.GetMethodSigHelper(Module, CallingConvention, Type) is only
+// PUBLIC on .NET Framework; on CoreCLR it is non-public. MelonLoader can load this .NETFramework-
+// compiled MonoMod.Utils under a CoreCLR (net8) runtime, and there the hard reference makes this
+// type's static constructor throw MissingMethodException, which cascades into a
+// TypeInitializationException and kills every Harmony/MonoMod-based fix. The reflection-based
+// lookup in the #else branch below is safe on BOTH runtimes (it finds the public overload on
+// .NET Framework and the non-public one on CoreCLR, falling back lazily), so always use it.
 
 using Mono.Cecil;
 using System;
