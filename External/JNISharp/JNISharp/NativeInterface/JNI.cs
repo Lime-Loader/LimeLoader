@@ -12,6 +12,18 @@ public unsafe static partial class JNI
 {
     internal static JavaVM* VM;
 
+    // Managed id of the thread that first initialized JNI (the ART/Unity main thread whose JNIEnv*
+    // we hold). On the Quest's ART+CoreCLR, JNIEnv resolution on OTHER threads - notably the GC
+    // finalizer thread - comes back as the MAIN thread's JNIEnv* no matter how you ask (cached
+    // [ThreadStatic] env, GetEnv, or AttachCurrentThread). Passing that foreign env to Delete*Ref is
+    // a fatal CheckJNI abort ("using JNIEnv* from thread main ... in call to DeleteGlobalRef"). So
+    // ref cleanup that runs off this thread is deferred and drained here, on the main thread.
+    private static int _mainThreadId = -1;
+    private struct PendingRef { public IntPtr Handle; public byte Kind; }
+    private static readonly Queue<PendingRef> _pendingRefDeletes = new Queue<PendingRef>();
+    private static readonly object _pendingRefLock = new object();
+    private static volatile bool _hasPendingRefDeletes;
+    private const byte REF_GLOBAL = 0, REF_WEAKGLOBAL = 1, REF_LOCAL = 2;
 
     [ThreadStatic]
     private static JNIEnv* _env;
@@ -27,6 +39,12 @@ public unsafe static partial class JNI
                 Initialize(IntPtr.Zero);
             }
 
+            // On the main thread, opportunistically release refs whose finalizers ran elsewhere.
+            if (_hasPendingRefDeletes
+                && _mainThreadId != -1
+                && System.Threading.Thread.CurrentThread.ManagedThreadId == _mainThreadId)
+                DrainPendingRefDeletes();
+
             return _env;
         }
     }
@@ -34,28 +52,78 @@ public unsafe static partial class JNI
     public static IntPtr JavaVMPtr => (IntPtr)VM;
     internal static Dictionary<string, JClass> ClassCache { get; set; } = new();
 
-    // Returns the JNIEnv* belonging to the CURRENT thread, attaching it if needed. Unlike the
-    // cached [ThreadStatic] Env, this always asks the JVM, which is required when a JNI call runs
-    // on a thread the runtime reused or attached elsewhere - most notably the GC finalizer thread,
-    // where JObject finalizers release global refs. Passing a JNIEnv* that belongs to a different
-    // thread to Delete*Ref is a fatal CheckJNI error ("using JNIEnv* from thread ...").
-    internal static unsafe JNIEnv* CurrentThreadEnv()
+    // Deletes a JNI reference, or defers it if we are not on the main thread. Ref deletion must use
+    // the JNIEnv* of the calling thread, but on this ART+CoreCLR build every way of resolving the
+    // env off the main thread (cached env, GetEnv, AttachCurrentThread) returns the MAIN thread's
+    // env, and handing that to Delete*Ref is a fatal CheckJNI abort. So: on the main thread we delete
+    // immediately (first flushing anything queued from other threads); off the main thread we queue
+    // global/weak refs for the main thread to release, and drop local refs (a local ref is only valid
+    // on its creating thread and is reclaimed when that thread's frame returns). Worst case is a
+    // small, bounded ref leak instead of killing the process.
+    private static void DeleteRef(IntPtr handle, byte kind)
     {
-        if (VM == null)
-            return _env;
+        if (handle == IntPtr.Zero)
+            return;
 
-        VM->Functions->GetEnv(VM, out IntPtr penv, (int)Version.V1_6);
-        if (penv != IntPtr.Zero)
-            return (JNIEnv*)penv;
+        if (_mainThreadId == -1 || System.Threading.Thread.CurrentThread.ManagedThreadId == _mainThreadId)
+        {
+            DrainPendingRefDeletes();
+            DeleteRefNow(handle, kind);
+            return;
+        }
 
-        VM->Functions->AttachCurrentThread(VM, out JNIEnv* attached, IntPtr.Zero);
-        return attached;
+        if (kind == REF_LOCAL)
+            return;
+
+        lock (_pendingRefLock)
+        {
+            _pendingRefDeletes.Enqueue(new PendingRef { Handle = handle, Kind = kind });
+            _hasPendingRefDeletes = true;
+        }
+    }
+
+    // Must only be called on the main thread, where _env is the env that owns these refs.
+    private static void DeleteRefNow(IntPtr handle, byte kind)
+    {
+        JNIEnv* env = _env;
+        if (env == null || handle == IntPtr.Zero)
+            return;
+
+        switch (kind)
+        {
+            case REF_GLOBAL: env->Functions->DeleteGlobalRef(env, handle); break;
+            case REF_WEAKGLOBAL: env->Functions->DeleteWeakGlobalRef(env, handle); break;
+            case REF_LOCAL: env->Functions->DeleteLocalRef(env, handle); break;
+        }
+    }
+
+    private static void DrainPendingRefDeletes()
+    {
+        while (true)
+        {
+            PendingRef item;
+            lock (_pendingRefLock)
+            {
+                if (_pendingRefDeletes.Count == 0)
+                {
+                    _hasPendingRefDeletes = false;
+                    return;
+                }
+                item = _pendingRefDeletes.Dequeue();
+            }
+            DeleteRefNow(item.Handle, item.Kind);
+        }
     }
 
     public static void Initialize(IntPtr vmPtr)
     {
         if (VM == null && vmPtr != IntPtr.Zero)
+        {
             VM = (JavaVM*)vmPtr;
+            // The first Initialize call comes from MelonLoader.Core on the ART/Unity main thread.
+            // Record it as the only thread on which JNI ref deletion is safe (see _pendingRefDeletes).
+            _mainThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
+        }
         else if (VM == null)
             throw new InvalidOperationException("JavaVM not initialized. Call JNI.Initialize() with a VM pointer first.");
 
@@ -282,17 +350,10 @@ public unsafe static partial class JNI
     {
         unsafe
         {
-            if (gref == null)
+            if (gref == null || !gref.Valid())
                 return;
 
-            if (!gref.Valid())
-                return;
-
-            JNIEnv* env = CurrentThreadEnv();
-            if (env == null)
-                return;
-
-            env->Functions->DeleteGlobalRef(env, gref.Handle);
+            DeleteRef(gref.Handle, REF_GLOBAL);
         }
     }
 
@@ -310,17 +371,10 @@ public unsafe static partial class JNI
     {
         unsafe
         {
-            if (lref == null)
+            if (lref == null || !lref.Valid())
                 return;
 
-            if (!lref.Valid())
-                return;
-
-            JNIEnv* env = CurrentThreadEnv();
-            if (env == null)
-                return;
-
-            env->Functions->DeleteLocalRef(env, lref.Handle);
+            DeleteRef(lref.Handle, REF_LOCAL);
         }
     }
 
@@ -1448,11 +1502,7 @@ public unsafe static partial class JNI
             if (obj == null || !obj.Valid())
                 return;
 
-            JNIEnv* env = CurrentThreadEnv();
-            if (env == null)
-                return;
-
-            env->Functions->DeleteWeakGlobalRef(env, obj.Handle);
+            DeleteRef(obj.Handle, REF_WEAKGLOBAL);
         }
     }
 
