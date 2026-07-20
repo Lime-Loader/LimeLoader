@@ -43,6 +43,18 @@ namespace MelonLoader
             APKAssetManager.Initialize();
             MelonLogger.Msg($"Initialized JNI [build {BuildInfo.Version}, ref-delete deferral, main thread {JNI.MainThreadId}]");
 
+            // [FIX/DIAG] The .NET runtime is hosted (invoked via function pointers), so once
+            // Start() returns there is no live foreground managed thread - and the runtime was
+            // exit()ing cleanly right after, tearing the process down (the DeleteGlobalRef abort is
+            // just Unity's atexit teardown of that exit). Hold a foreground thread so the runtime
+            // cannot idle-shutdown. If this stops the exit, that was the cause.
+            var keepAlive = new System.Threading.Thread(() =>
+            {
+                while (true) System.Threading.Thread.Sleep(600000);
+            })
+            { IsBackground = false, Name = "LimeLoaderKeepAlive" };
+            keepAlive.Start();
+
             APKAssetManager.CopyAdditionalData();
 
             if (IsBad(MelonEnvironment.PackageName))
