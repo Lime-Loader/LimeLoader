@@ -2,9 +2,8 @@ use std::ffi::CString;
 use android_liblog_sys::__android_log_write;
 
 pub unsafe fn redirect_stderr() {
-    std::env::set_var("COREHOST_TRACE", "1");
-    std::env::set_var("COREHOST_TRACE_VERBOSITY", "3");
-
+    // NOTE: COREHOST_TRACE intentionally NOT set here - it floods logcat with hostfxr trace. We
+    // only want the runtime's own stderr (fatal-error text) so a clean/fatal exit is visible.
     let mut pipes: [libc::c_int; 2] = [0; 2];
     libc::pipe(pipes.as_mut_ptr());
     libc::dup2(pipes[1], libc::STDERR_FILENO);
@@ -20,9 +19,6 @@ pub unsafe fn redirect_stderr() {
 }
 
 pub unsafe fn redirect_stdout() {
-    std::env::set_var("COREHOST_TRACE", "1");
-    std::env::set_var("COREHOST_TRACE_VERBOSITY", "3");
-
     let mut pipes: [libc::c_int; 2] = [0; 2];
     libc::pipe(pipes.as_mut_ptr());
     libc::dup2(pipes[1], libc::STDOUT_FILENO);

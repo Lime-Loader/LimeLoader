@@ -32,11 +32,11 @@ pub extern "system" fn JNI_OnLoad(vm: JavaVM, _: *mut c_void) -> jint {
 
     crate::logging::logger::init().expect("Failed to initialize logger!");
 
-    #[cfg(debug_assertions)]
+    // Capture the .NET runtime's stderr/stdout in ALL builds so a clean/fatal CoreCLR exit (which
+    // otherwise leaves no managed trace) shows its reason in logcat under the MelonLoader tag.
     std::thread::spawn(|| unsafe {
         crate::dotnet_trace::redirect_stderr();
     });
-    #[cfg(debug_assertions)]
     std::thread::spawn(|| unsafe {
         crate::dotnet_trace::redirect_stdout();
     });
