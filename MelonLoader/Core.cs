@@ -41,7 +41,7 @@ namespace MelonLoader
             IntPtr ptr = BootstrapInterop.NativeGetJavaVM();
             JNI.Initialize(ptr);
             APKAssetManager.Initialize();
-            MelonLogger.Msg("Initialized JNI");
+            MelonLogger.Msg($"Initialized JNI [build {BuildInfo.Version}, ref-delete deferral, main thread {JNI.MainThreadId}]");
 
             APKAssetManager.CopyAdditionalData();
 

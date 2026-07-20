@@ -50,6 +50,10 @@ public unsafe static partial class JNI
     }
 
     public static IntPtr JavaVMPtr => (IntPtr)VM;
+
+    // Managed id of the thread JNI was initialized on (the only thread ref deletion runs on). -1
+    // until Initialize() runs. Exposed for a startup diagnostic so logs confirm this build is live.
+    public static int MainThreadId => _mainThreadId;
     internal static Dictionary<string, JClass> ClassCache { get; set; } = new();
 
     // Deletes a JNI reference, or defers it if we are not on the main thread. Ref deletion must use
