@@ -41,6 +41,18 @@ fn detour_inner(name: *const c_char) -> Result<*mut Il2CppDomain, DynErr> {
     let trampoline = INIT_HOOK.try_read()?;
     let domain = trampoline(name);
 
+    // DIAGNOSTIC (0.1.11): skip ALL MelonLoader init so il2cpp_init returns immediately, leaving Unity's
+    // main thread unblocked for its XR/Vulkan graphics bring-up. If the game renders with this, the
+    // multi-second init block is confirmed to be what mistimes Unity's framebuffer creation (-> we then
+    // eliminate the block via a pre-Unity loader / off-main init). If it STILL crashes, the block is not
+    // the cause and that whole direction is a dead end. Set back to false for a real build.
+    const SKIP_MELONLOADER_INIT: bool = true;
+    if SKIP_MELONLOADER_INIT {
+        crate::log!("[DIAG] Skipping MelonLoader init - testing Unity graphics bring-up with no il2cpp_init block");
+        trampoline.unhook()?;
+        return Ok(domain);
+    }
+
     crate::base_assembly::init(crate::runtime!()?)?;
 
     // Run pre-start (il2cpp assembly generator check + interop assembly pre-load) HERE, right after
