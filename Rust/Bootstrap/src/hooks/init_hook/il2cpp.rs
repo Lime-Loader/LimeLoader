@@ -50,11 +50,11 @@ fn detour_inner(name: *const c_char) -> Result<*mut Il2CppDomain, DynErr> {
     debug!("Detaching hook from il2cpp_init")?;
     trampoline.unhook()?;
 
-    // NOTE: do NOT install crate::hooks::il2cpp_null_guards here. il2cpp_method_get_param_count is a
-    // single 4-byte tail-call instruction (its neighbour il2cpp_method_get_param sits 4 bytes later),
-    // so an inline detour - which needs ~16 bytes - overwrites the adjacent exports and corrupts
-    // il2cpp. Doing that produced an earlier, worse crash (fault addr 0x28 during startup). See
-    // il2cpp_null_guards.rs for the details.
+    // Guard il2cpp's parameter APIs before Unity registers its engine modules. Unity 6 hands them a
+    // NULL MethodInfo for modules whose managed methods are stripped (AccessibilityModule on Quest),
+    // and il2cpp dereferences it. The guard resolves the exports by name and adapts to how each one is
+    // compiled, so it is not tied to any particular game build - see il2cpp_null_guards.rs.
+    crate::hooks::il2cpp_null_guards::hook()?;
 
     invoke_hook::hook()?;
 
