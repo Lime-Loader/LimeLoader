@@ -254,25 +254,58 @@ struct SigContext {
 /// Locate the sigcontext inside the ucontext without trusting any single libc layout: scan for a
 /// candidate whose fault_address matches siginfo's si_addr AND whose pc lands in an executable
 /// mapping. Self-correcting, and it logs the offset it settled on.
+/// All reads here are volatile and this is never inlined: without that, LLVM is free to reason about
+/// these raw out-of-struct reads and it optimized the entire register dump away (the binary ended up
+/// missing every string in the dump path).
+#[inline(never)]
 fn find_sigcontext(ctx: *mut c_void, fault: u64, maps_len: usize, o: &mut Out) -> *const SigContext {
     let base = ctx as *const u8;
-    for off in (0..1024usize).step_by(8) {
-        let cand = unsafe { base.add(off) } as *const SigContext;
-        let fa = unsafe { (*cand).fault_address };
-        let pc = unsafe { (*cand).pc };
+
+    let candidate_at = |off: usize| -> (u64, u64) {
+        unsafe {
+            let p = base.add(off);
+            let fa = std::ptr::read_volatile(p as *const u64);
+            let pc = std::ptr::read_volatile(p.add(8 + 31 * 8 + 8) as *const u64);
+            (fa, pc)
+        }
+    };
+
+    // Preferred: the offset this device actually uses. libc's aarch64 ucontext_t omits the 128 bytes
+    // bionic reserves for the signal mask, so the real sigcontext sits 128 bytes past libc's
+    // uc_mcontext - confirmed on-device by fault_address turning up where regs[15] was expected.
+    let libc_off = unsafe {
+        let uc = ctx as *const libc::ucontext_t;
+        (&(*uc).uc_mcontext) as *const _ as usize - ctx as usize
+    };
+    let preferred = libc_off + 128;
+    let (fa, pc) = candidate_at(preferred);
+    if fa == fault && executable(pc, maps_len) {
+        o.s("sigcontext at ucontext+").hex(preferred as u64).s(" (expected offset)").flush();
+        return unsafe { base.add(preferred) } as *const SigContext;
+    }
+
+    // Otherwise scan for any candidate whose fault_address matches siginfo and whose pc is executable.
+    let mut off = 0usize;
+    while off < 1024 {
+        let (fa, pc) = candidate_at(off);
         if fa == fault && executable(pc, maps_len) {
-            o.s("sigcontext found at ucontext+").hex(off as u64).flush();
-            return cand;
+            o.s("sigcontext at ucontext+").hex(off as u64).s(" (scanned)").flush();
+            return unsafe { base.add(off) } as *const SigContext;
         }
+        off += 8;
     }
-    // Fall back to the documented layout even if validation failed (e.g. a null fault address).
-    for off in (0..1024usize).step_by(8) {
-        let cand = unsafe { base.add(off) } as *const SigContext;
-        if executable(unsafe { (*cand).pc }, maps_len) {
-            o.s("sigcontext guessed at ucontext+").hex(off as u64).flush();
-            return cand;
+
+    // Last resort: any candidate with an executable pc.
+    let mut off = 0usize;
+    while off < 1024 {
+        let (_, pc) = candidate_at(off);
+        if executable(pc, maps_len) {
+            o.s("sigcontext at ucontext+").hex(off as u64).s(" (pc-only guess)").flush();
+            return unsafe { base.add(off) } as *const SigContext;
         }
+        off += 8;
     }
+
     o.s("could not locate sigcontext").flush();
     std::ptr::null()
 }
@@ -368,11 +401,12 @@ extern "C" fn handler(sig: i32, info: *mut libc::siginfo_t, ctx: *mut c_void) {
     };
 
     if !sc.is_null() {
-        let mc = unsafe { &*sc };
-        let pc = mc.pc;
-        let sp = mc.sp;
-        let lr = mc.regs[30];
-        let fp = mc.regs[29];
+        // Volatile reads throughout: see find_sigcontext - non-volatile reads let LLVM delete the dump.
+        let reg = |i: usize| unsafe { std::ptr::read_volatile(&(*sc).regs[i] as *const u64) };
+        let pc = unsafe { std::ptr::read_volatile(&(*sc).pc as *const u64) };
+        let sp = unsafe { std::ptr::read_volatile(&(*sc).sp as *const u64) };
+        let lr = reg(30);
+        let fp = reg(29);
 
         o.s("pc ").hex(pc);
         attribute(pc, maps_len, &mut o);
@@ -387,8 +421,9 @@ extern "C" fn handler(sig: i32, info: *mut libc::siginfo_t, ctx: *mut c_void) {
         // general registers - x0 matters most here: a null x0 is the whole story for this class of bug,
         // and x8/x16/x17 typically hold the target of an indirect `blr`, i.e. who was being called.
         for r in 0..31usize {
-            o.s("x").dec(r as i64).s(" ").hex(mc.regs[r]);
-            attribute(mc.regs[r], maps_len, &mut o);
+            let v = reg(r);
+            o.s("x").dec(r as i64).s(" ").hex(v);
+            attribute(v, maps_len, &mut o);
             o.flush();
         }
 
