@@ -54,17 +54,23 @@ fn detour_inner(
         debug!("Detaching hook from il2cpp_runtime_invoke")?;
         trampoline.unhook()?;
 
+        // The ENTIRE MelonLoader init pipeline runs here rather than during il2cpp_init, where its ~5s
+        // main-thread stall delayed Unity's graphics bring-up past the window/focus change and crashed
+        // the render thread in vkCreateFramebuffer. Here graphics is already up, and we're still on the
+        // JVM-attached main thread (so JNISharp stays valid) with a live scene for the type injection.
+        //
+        // ORDER MATTERS: init() must come before the mono thread reset. mono_lib!() only loads
+        // libcoreclr, it does not initialize the runtime - resetting the thread first makes mono
+        // pthread_kill a thread that doesn't exist yet and abort on
+        // "mono-threads-posix-signals.c:340, condition `ret != -1' not met".
+        base_assembly::init(runtime!()?)?;
+
         debug!("Resetting mono thread")?;
         let lib = crate::mono_lib!()?;
         let thread_suspend_reload = lib.exports.mono_melonloader_thread_suspend_reload.as_ref().unwrap();
         thread_suspend_reload();
         debug!("Mono thread reset")?;
 
-        // The ENTIRE MelonLoader init pipeline runs here rather than during il2cpp_init, where its ~5s
-        // main-thread stall delayed Unity's graphics bring-up past the window/focus change and crashed
-        // the render thread in vkCreateFramebuffer. Here graphics is already up, and we're still on the
-        // JVM-attached main thread (so JNISharp stays valid) with a live scene for the type injection.
-        base_assembly::init(runtime!()?)?;
         base_assembly::pre_start()?;
         base_assembly::start()?;
     }

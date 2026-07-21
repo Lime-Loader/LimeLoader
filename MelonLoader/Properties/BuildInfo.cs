@@ -6,6 +6,6 @@ namespace MelonLoader
         public const string Description = "Universal Unity mod loader for the newest Unity versions and Android";
         public const string Author = "LimeLoader";
         public const string Company = "";
-        public const string Version = "0.1.13";
+        public const string Version = "0.1.14";
     }
 }
