@@ -22,10 +22,11 @@ lazy_static! {
 static STARTED: AtomicBool = AtomicBool::new(false);
 
 // How long to let Unity keep running after the FIRST active-scene change before we run MelonLoader's
-// Start (support module + type injection). Start blocks the Unity main thread for ~1s, and doing that
-// immediately on the first scene change raced Unity's first-frame Vulkan framebuffer creation - the
-// render thread segfaulted in vkCreateFramebuffer on Quest / Unity 6. Letting Unity render its first
-// frames first means the swapchain/framebuffer already exists before we stall the main thread.
+// ENTIRE init pipeline (init + pre_start + start). That work blocks the Unity main thread for ~5s;
+// doing it during il2cpp_init delayed Unity's XR/Vulkan graphics bring-up until after the window/focus
+// had settled and segfaulted the render thread in vkCreateFramebuffer on Quest / Unity 6. The first
+// scene change only fires once graphics is already up, so running the whole pipeline a moment after it
+// means the swapchain/framebuffer already exists and our stall can no longer mistime it.
 const START_DELAY_MS: u128 = 2500;
 
 pub fn detour(
@@ -86,8 +87,12 @@ fn detour_inner(
         thread_suspend_reload();
         debug!("Mono thread reset")?;
 
-        // pre_start (generator + interop assembly pre-load) already ran during il2cpp_init; only the
-        // fast type injection runs here, now that Unity has had time to render its first frames.
+        // Run the ENTIRE MelonLoader init pipeline HERE, now that Unity's graphics is already up, so the
+        // ~5s block can no longer mistime Unity's framebuffer creation. This runs on Unity's main thread
+        // (this runtime_invoke is JVM-attached, so JNISharp's JNI calls stay valid) and after the first
+        // scene change (so a scene is live for the type injection in start()).
+        base_assembly::init(runtime!()?)?;
+        base_assembly::pre_start()?;
         base_assembly::start()?;
     }
 
