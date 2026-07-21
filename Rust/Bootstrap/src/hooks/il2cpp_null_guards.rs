@@ -39,15 +39,6 @@ use crate::{debug, errors::DynErr, hooks::NativeHook, log, runtime};
 /// x0, and for both "0" is the correct answer for a null method (count 0 / null pointer).
 pub type ParamCountFn = extern "C" fn(*mut c_void) -> u64;
 
-lazy_static! {
-    // One slot per guarded export. A shared Vec would not work: the detour has no way to tell which
-    // export it was entered for, so each needs its own hook and its own detour.
-    static ref PARAM_COUNT_HOOK: RwLock<NativeHook<ParamCountFn>> =
-        RwLock::new(NativeHook::new(std::ptr::null_mut(), std::ptr::null_mut()));
-    static ref PARAM_HOOK: RwLock<NativeHook<ParamCountFn>> =
-        RwLock::new(NativeHook::new(std::ptr::null_mut(), std::ptr::null_mut()));
-}
-
 // ---------------------------------------------------------------------------------------------
 // AArch64 encoding helpers
 // ---------------------------------------------------------------------------------------------
@@ -231,25 +222,6 @@ unsafe fn write_stub(stub: *mut u32, original_target: usize) -> bool {
 // Fallback path for exports that are real functions rather than 4-byte thunks
 // ---------------------------------------------------------------------------------------------
 
-macro_rules! guard_detour {
-    ($name:ident, $lock:expr) => {
-        extern "C" fn $name(method: *mut c_void) -> u64 {
-            if method.is_null() {
-                return 0;
-            }
-            match $lock.try_read() {
-                Ok(trampoline) => trampoline(method),
-                Err(_) => 0,
-            }
-        }
-    };
-}
-
-guard_detour!(param_count_detour, PARAM_COUNT_HOOK);
-guard_detour!(param_detour, PARAM_HOOK);
-
-// ---------------------------------------------------------------------------------------------
-
 fn guard_export(
     name: &str,
     slot: &RwLock<NativeHook<ParamCountFn>>,
@@ -327,9 +299,55 @@ fn guard_export(
     Ok(())
 }
 
-/// Guard the parameter APIs against the NULL MethodInfo Unity hands them for stripped modules.
-pub fn hook() -> Result<(), DynErr> {
-    guard_export("il2cpp_method_get_param_count", &PARAM_COUNT_HOOK, param_count_detour)?;
-    guard_export("il2cpp_method_get_param", &PARAM_HOOK, param_detour)?;
-    Ok(())
+/// Declares a guard per export: a hook slot, a detour that short-circuits NULL, and the wiring.
+///
+/// Every one of these takes the MethodInfo* in x0, and for every one of them "0" is the right answer
+/// for a null method - a zero count, a null pointer, or false. Guarding the whole family rather than
+/// individual functions matters: Unity does not make one call with the bad method, it makes a run of
+/// them, so patching only the first just moves the crash to the next accessor.
+macro_rules! guards {
+    ($(($detour:ident, $slot:ident, $export:literal)),* $(,)?) => {
+        lazy_static! {
+            $(
+                // Each export needs its own slot: a detour cannot tell which function it was entered
+                // for, so a shared slot would call the wrong trampoline.
+                static ref $slot: RwLock<NativeHook<ParamCountFn>> =
+                    RwLock::new(NativeHook::new(std::ptr::null_mut(), std::ptr::null_mut()));
+            )*
+        }
+        $(
+            extern "C" fn $detour(method: *mut c_void) -> u64 {
+                if method.is_null() {
+                    return 0;
+                }
+                match $slot.try_read() {
+                    Ok(trampoline) => trampoline(method),
+                    Err(_) => 0,
+                }
+            }
+        )*
+        /// Guard il2cpp's method APIs against the NULL MethodInfo Unity hands them for stripped modules.
+        pub fn hook() -> Result<(), DynErr> {
+            $( guard_export($export, &$slot, $detour)?; )*
+            Ok(())
+        }
+    };
 }
+
+guards!(
+    (d_param_count,     H_PARAM_COUNT,     "il2cpp_method_get_param_count"),
+    (d_param,           H_PARAM,           "il2cpp_method_get_param"),
+    (d_param_name,      H_PARAM_NAME,      "il2cpp_method_get_param_name"),
+    (d_name,            H_NAME,            "il2cpp_method_get_name"),
+    (d_class,           H_CLASS,           "il2cpp_method_get_class"),
+    (d_declaring_type,  H_DECLARING_TYPE,  "il2cpp_method_get_declaring_type"),
+    (d_return_type,     H_RETURN_TYPE,     "il2cpp_method_get_return_type"),
+    (d_flags,           H_FLAGS,           "il2cpp_method_get_flags"),
+    (d_token,           H_TOKEN,           "il2cpp_method_get_token"),
+    (d_object,          H_OBJECT,          "il2cpp_method_get_object"),
+    (d_has_attribute,   H_HAS_ATTRIBUTE,   "il2cpp_method_has_attribute"),
+    (d_is_generic,      H_IS_GENERIC,      "il2cpp_method_is_generic"),
+    (d_is_inflated,     H_IS_INFLATED,     "il2cpp_method_is_inflated"),
+    (d_is_instance,     H_IS_INSTANCE,     "il2cpp_method_is_instance"),
+    (d_from_reflection, H_FROM_REFLECTION, "il2cpp_method_get_from_reflection"),
+);
