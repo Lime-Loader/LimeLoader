@@ -50,9 +50,9 @@ fn detour_inner(name: *const c_char) -> Result<*mut Il2CppDomain, DynErr> {
     debug!("Detaching hook from il2cpp_init")?;
     trampoline.unhook()?;
 
-    // Install BEFORE Unity registers its engine modules - that registration is what hits the missing
-    // null-check in il2cpp's mono_method_get_param_names for Unity 6's stripped modules.
-    crate::hooks::param_names_guard::hook()?;
+    // Install BEFORE anything resolves methods: Unity 6's stripped engine modules yield NULL
+    // MethodInfo*, and il2cpp's parameter APIs deref that without a null check.
+    crate::hooks::il2cpp_null_guards::hook()?;
 
     invoke_hook::hook()?;
 
