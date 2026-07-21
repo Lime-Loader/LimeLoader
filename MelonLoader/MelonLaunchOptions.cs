@@ -42,6 +42,17 @@ namespace MelonLoader
 
         internal static void Load()
         {
+            // A diagnostics build of the native bootstrap sets this, since there is no practical way to
+            // pass --melonloader.debug on Android. It turns on MelonDebug output, which then flows
+            // through the native print bridge into /sdcard/MelonLoader/debug.log along with everything
+            // else. Normal release builds never set it, so this costs one env lookup.
+            try
+            {
+                if (Environment.GetEnvironmentVariable("LIMELOADER_DIAGNOSTICS") == "1")
+                    Core.IsDebug = true;
+            }
+            catch { }
+
             LemonEnumerator<string> argEnumerator = new LemonEnumerator<string>(CommandLineArgs);
             while (argEnumerator.MoveNext())
             {

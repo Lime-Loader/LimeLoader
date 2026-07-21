@@ -1,7 +1,11 @@
 #[macro_export]
 macro_rules! debug_enabled {
     () => {{
-        if cfg!(debug_assertions) {
+        // A diagnostics build always logs debug!, otherwise it is release-gated behind the flag -
+        // which is exactly why earlier release builds appeared to log nothing at all.
+        if cfg!(feature = "diagnostics") {
+            true
+        } else if cfg!(debug_assertions) {
             true
         } else {
             let args: Vec<String> = std::env::args().collect();

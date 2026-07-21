@@ -73,6 +73,10 @@ fn write(msg: &str) -> Result<(), DynErr> {
 
 /// logs to console and file, should not be used, use the log! macro instead
 pub fn log_console_file(level: LogLevel, message: &str) -> Result<(), LogError> {
+    // Diagnostics build: every native log line is also mirrored into the single catch-all file.
+    #[cfg(feature = "diagnostics")]
+    crate::diagnostics::write_line(message);
+
     match level {
         LogLevel::Info => {
             // [19:11:50.321] message
@@ -242,4 +246,20 @@ macro_rules! cstr {
     ($($arg:tt)*) => {
        std::ffi::CString::new(format!($($arg)*))?.as_ptr()
     };
+}
+
+/// Diagnostics-only breadcrumb. Compiles to nothing unless built with `--features diagnostics`,
+/// so these can be sprinkled liberally along the init path without affecting release builds.
+#[macro_export]
+#[cfg(feature = "diagnostics")]
+macro_rules! diag {
+    ($($arg:tt)*) => {{
+        $crate::diagnostics::write_line(&format!("[diag] {}", format_args!($($arg)*)));
+    }};
+}
+
+#[macro_export]
+#[cfg(not(feature = "diagnostics"))]
+macro_rules! diag {
+    ($($arg:tt)*) => {{}};
 }

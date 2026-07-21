@@ -3,6 +3,11 @@ name = "Bootstrap"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+# Deep diagnostics: catch-all debug.log, forced debug! logging, maps dump and a
+# register/backtrace crash handler. Off by default so release builds pay nothing.
+diagnostics = []
+
 [dependencies]
 unity-rs = { git = "https://github.com/TrevTV/Ferrex/", branch = "mono-thread-checking" }
 ctor = "0.2.8"

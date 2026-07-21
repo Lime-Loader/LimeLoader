@@ -63,7 +63,20 @@ fn detour_inner(
         // libcoreclr, it does not initialize the runtime - resetting the thread first makes mono
         // pthread_kill a thread that doesn't exist yet and abort on
         // "mono-threads-posix-signals.c:340, condition `ret != -1' not met".
+        crate::diag!("pipeline: scene change seen, starting base_assembly::init");
         base_assembly::init(runtime!()?)?;
+        crate::diag!("pipeline: base_assembly::init returned");
+
+        // CoreCLR installs its own signal handlers during init and "handles" SIGSEGV by printing a bare
+        // instruction pointer and exiting - which is why no tombstone and no stack has ever been
+        // available. Re-arm ours now so it runs FIRST and can record registers and a real backtrace,
+        // then chains to CoreCLR so behaviour is otherwise unchanged.
+        #[cfg(feature = "diagnostics")]
+        {
+            crate::diagnostics::crash_handler::install();
+            // Re-dump: the runtime has mapped libcoreclr and friends since the first snapshot.
+            crate::diagnostics::dump_maps();
+        }
 
         debug!("Resetting mono thread")?;
         let lib = crate::mono_lib!()?;
@@ -71,8 +84,11 @@ fn detour_inner(
         thread_suspend_reload();
         debug!("Mono thread reset")?;
 
+        crate::diag!("pipeline: starting pre_start (generator + interop preload)");
         base_assembly::pre_start()?;
+        crate::diag!("pipeline: pre_start returned; starting start (support module + injection)");
         base_assembly::start()?;
+        crate::diag!("pipeline: start returned - MelonLoader fully initialized");
     }
 
     Ok(result)

@@ -32,6 +32,11 @@ pub extern "system" fn JNI_OnLoad(vm: JavaVM, _: *mut c_void) -> jint {
 
     crate::logging::logger::init().expect("Failed to initialize logger!");
 
+    // Bring up the catch-all debug.log, dump the memory map and arm the crash handler as early as
+    // possible, so even a very early fault is captured with attribution.
+    #[cfg(feature = "diagnostics")]
+    crate::diagnostics::init();
+
     // Capture the .NET runtime's stderr/stdout in ALL builds so a clean/fatal CoreCLR exit (which
     // otherwise leaves no managed trace) shows its reason in logcat under the MelonLoader tag.
     std::thread::spawn(|| unsafe {
@@ -62,5 +67,14 @@ pub extern "C" fn melonloader_print_string(input: *const c_char) {
     unsafe {
         let tag = CString::new("MelonLoader").unwrap();
         android_liblog_sys::__android_log_write(4, tag.as_ptr(), input);
+
+        // Every managed MelonLoader line comes through here, so teeing it gives debug.log the
+        // complete picture - managed and native interleaved in one file, in order.
+        #[cfg(feature = "diagnostics")]
+        {
+            if let Ok(text) = std::ffi::CStr::from_ptr(input).to_str() {
+                crate::diagnostics::write_line(text);
+            }
+        }
     }
 }

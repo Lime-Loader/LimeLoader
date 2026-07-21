@@ -13,6 +13,8 @@
 // #![allow(clippy::inherent_to_string, clippy::type_complexity, improper_ctypes)]
 // #![cfg_attr(docsrs, feature(doc_cfg))]
 
+#[cfg(feature = "diagnostics")]
+pub mod diagnostics;
 pub mod base_assembly;
 pub mod console;
 pub mod constants;
