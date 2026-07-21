@@ -7,6 +7,7 @@ use std::ptr::null_mut;
 pub mod functions;
 pub mod init_hook;
 pub mod invoke_hook;
+pub mod param_names_guard;
 
 #[derive(Debug)]
 pub struct NativeHook<T> {
