@@ -73,6 +73,20 @@ fn detour_inner(
 
         base_assembly::pre_start()?;
         base_assembly::start()?;
+
+        // DIAGNOSTIC (0.1.17): the crash lands ~130ms after this point and CoreCLR swallows the SIGSEGV
+        // (so debuggerd never writes a tombstone), leaving only a fault IP with no library attribution.
+        // Dump the executable mappings here so that IP can be resolved to an actual .so - every run so
+        // far has faulted at the same tiny `ldrb w0,[x0]; ret` function, but in an unknown library.
+        crate::log!("[DIAG] executable maps follow - correlate with the crash-report fault IP");
+        if let Ok(maps) = std::fs::read_to_string("/proc/self/maps") {
+            for line in maps.lines() {
+                if line.contains("r-xp") && line.contains('/') {
+                    crate::log!("[MAPS] {}", line);
+                }
+            }
+        }
+        crate::log!("[DIAG] end of executable maps");
     }
 
     Ok(result)
