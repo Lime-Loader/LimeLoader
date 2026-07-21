@@ -238,6 +238,74 @@ fn attribute(addr: u64, maps_len: usize, out: &mut Out) {
     out.s(" <unmapped>");
 }
 
+/// The kernel's aarch64 sigcontext. Declared here rather than using libc's `mcontext_t` because
+/// bionic's `ucontext_t` reserves 128 bytes for the signal mask (`__u8 __unused[1024/8 - sizeof
+/// (sigset_t)]`) that the libc crate's struct omits - reading through libc's layout lands 128 bytes
+/// early, which produced a garbage dump (pc=0x1, sp=0x2c, registers mostly zero) on the first attempt.
+#[repr(C)]
+struct SigContext {
+    fault_address: u64,
+    regs: [u64; 31],
+    sp: u64,
+    pc: u64,
+    pstate: u64,
+}
+
+/// Locate the sigcontext inside the ucontext without trusting any single libc layout: scan for a
+/// candidate whose fault_address matches siginfo's si_addr AND whose pc lands in an executable
+/// mapping. Self-correcting, and it logs the offset it settled on.
+fn find_sigcontext(ctx: *mut c_void, fault: u64, maps_len: usize, o: &mut Out) -> *const SigContext {
+    let base = ctx as *const u8;
+    for off in (0..1024usize).step_by(8) {
+        let cand = unsafe { base.add(off) } as *const SigContext;
+        let fa = unsafe { (*cand).fault_address };
+        let pc = unsafe { (*cand).pc };
+        if fa == fault && executable(pc, maps_len) {
+            o.s("sigcontext found at ucontext+").hex(off as u64).flush();
+            return cand;
+        }
+    }
+    // Fall back to the documented layout even if validation failed (e.g. a null fault address).
+    for off in (0..1024usize).step_by(8) {
+        let cand = unsafe { base.add(off) } as *const SigContext;
+        if executable(unsafe { (*cand).pc }, maps_len) {
+            o.s("sigcontext guessed at ucontext+").hex(off as u64).flush();
+            return cand;
+        }
+    }
+    o.s("could not locate sigcontext").flush();
+    std::ptr::null()
+}
+
+/// Is `addr` inside an executable mapping? Used to validate a candidate pc.
+fn executable(addr: u64, maps_len: usize) -> bool {
+    if addr == 0 {
+        return false;
+    }
+    let buf = unsafe { &MAPS_BUF[..maps_len] };
+    let mut i = 0usize;
+    while i < buf.len() {
+        let line_start = i;
+        while i < buf.len() && buf[i] != b'\n' {
+            i += 1;
+        }
+        let line = &buf[line_start..i];
+        i += 1;
+        let mut p = 0usize;
+        let lo = parse_hex(line, &mut p);
+        if p >= line.len() || line[p] != b'-' {
+            continue;
+        }
+        p += 1;
+        let hi = parse_hex(line, &mut p);
+        if addr >= lo && addr < hi {
+            // perms field follows one space: "r-xp"
+            return p + 3 < line.len() && line[p + 3] == b'x';
+        }
+    }
+    false
+}
+
 /// Is `addr` inside any readable mapping? Used to avoid faulting again while unwinding.
 fn readable(addr: u64, maps_len: usize) -> bool {
     if addr == 0 || addr & 7 != 0 {
@@ -293,9 +361,14 @@ extern "C" fn handler(sig: i32, info: *mut libc::siginfo_t, ctx: *mut c_void) {
     };
     o.s("fault address ").hex(fault).flush();
 
-    if !ctx.is_null() {
-        let uctx = ctx as *mut libc::ucontext_t;
-        let mc = unsafe { &(*uctx).uc_mcontext };
+    let sc = if ctx.is_null() {
+        std::ptr::null()
+    } else {
+        find_sigcontext(ctx, fault, maps_len, &mut o)
+    };
+
+    if !sc.is_null() {
+        let mc = unsafe { &*sc };
         let pc = mc.pc;
         let sp = mc.sp;
         let lr = mc.regs[30];
@@ -311,8 +384,9 @@ extern "C" fn handler(sig: i32, info: *mut libc::siginfo_t, ctx: *mut c_void) {
 
         o.s("sp ").hex(sp).s("  fp ").hex(fp).flush();
 
-        // general registers - x0 matters most here: a null x0 is the whole story for this class of bug
-        for r in 0..29usize {
+        // general registers - x0 matters most here: a null x0 is the whole story for this class of bug,
+        // and x8/x16/x17 typically hold the target of an indirect `blr`, i.e. who was being called.
+        for r in 0..31usize {
             o.s("x").dec(r as i64).s(" ").hex(mc.regs[r]);
             attribute(mc.regs[r], maps_len, &mut o);
             o.flush();
@@ -346,7 +420,15 @@ extern "C" fn handler(sig: i32, info: *mut libc::siginfo_t, ctx: *mut c_void) {
         }
         o.s("--- end backtrace ---").flush();
     } else {
-        o.s("no ucontext supplied").flush();
+        o.s("no usable sigcontext - raw ucontext words follow").flush();
+        if !ctx.is_null() {
+            for off in (0..64usize).step_by(8) {
+                let v = unsafe { *((ctx as *const u8).add(off) as *const u64) };
+                o.s("ucontext+").hex(off as u64).s(" ").hex(v);
+                attribute(v, maps_len, &mut o);
+                o.flush();
+            }
+        }
     }
 
     o.s("======== end crash handler ========").flush();
