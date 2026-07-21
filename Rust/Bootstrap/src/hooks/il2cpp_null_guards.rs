@@ -16,6 +16,16 @@
 //! These are deliberately native hooks rather than managed detours: these exports get called from
 //! Unity's own threads, which are not attached to the .NET runtime, so running managed code here would
 //! be unsafe.
+//!
+//! !! NOT CURRENTLY INSTALLED - DO NOT RE-ENABLE AS-IS !!
+//! il2cpp_method_get_param_count is a SINGLE 4-byte tail-call instruction: on this build it lives at
+//! 0x3d91d18 and il2cpp_method_get_param starts at 0x3d91d1c, four bytes later. An inline detour needs
+//! roughly 16 bytes, so hooking it overwrites the adjacent exports and corrupts il2cpp - in practice
+//! that turned the original crash into an earlier, worse one (SIGSEGV fault addr 0x28 during startup,
+//! before MelonLoader init even ran). Any real fix has to either patch that single branch instruction
+//! in place (needs a trampoline allocated within +/-128MB branch range) or fix the caller.
+//! mono_method_get_param_names (0x3d924bc) is a normal function and is safe to hook, but it is not the
+//! path that actually crashes.
 
 use std::{
     ffi::{c_char, c_void},

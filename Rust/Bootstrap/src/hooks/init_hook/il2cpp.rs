@@ -50,9 +50,11 @@ fn detour_inner(name: *const c_char) -> Result<*mut Il2CppDomain, DynErr> {
     debug!("Detaching hook from il2cpp_init")?;
     trampoline.unhook()?;
 
-    // Install BEFORE anything resolves methods: Unity 6's stripped engine modules yield NULL
-    // MethodInfo*, and il2cpp's parameter APIs deref that without a null check.
-    crate::hooks::il2cpp_null_guards::hook()?;
+    // NOTE: do NOT install crate::hooks::il2cpp_null_guards here. il2cpp_method_get_param_count is a
+    // single 4-byte tail-call instruction (its neighbour il2cpp_method_get_param sits 4 bytes later),
+    // so an inline detour - which needs ~16 bytes - overwrites the adjacent exports and corrupts
+    // il2cpp. Doing that produced an earlier, worse crash (fault addr 0x28 during startup). See
+    // il2cpp_null_guards.rs for the details.
 
     invoke_hook::hook()?;
 
