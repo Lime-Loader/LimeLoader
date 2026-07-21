@@ -35,6 +35,20 @@ fn detour_inner(
     exc: *mut *mut Il2CppObject,
 ) -> Result<*mut Il2CppObject, DynErr> {
     let trampoline = INVOKE_HOOK.try_read()?;
+
+    // Unity 6 ships engine modules whose managed methods are stripped (AccessibilityModule on Quest).
+    // It looks one up, gets NULL - that is the "Unable to find method ..." spam it logs - and then
+    // invokes it anyway. il2cpp_runtime_invoke dereferences the method immediately (reading flags at
+    // +0x4c), so the process dies with SIGSEGV at fault address 0x4c. Refusing the call is the only
+    // sane response: there is no method to run, so there is no result.
+    //
+    // This is why the hook now stays installed for the lifetime of the process. Once STARTED is set
+    // the detour does nothing but this null check, which is far cheaper than the method-name lookup it
+    // used to perform.
+    if method.is_null() {
+        return Ok(null_mut());
+    }
+
     let result = trampoline(method, obj, params, exc);
 
     if STARTED.load(Ordering::Relaxed) {
@@ -51,8 +65,9 @@ fn detour_inner(
     // active before Unity's graphics device exists, so by here the XR/Vulkan bring-up is already done -
     // which is exactly what the init pipeline must not interrupt.
     if name.contains("Internal_ActiveSceneChanged") && !STARTED.swap(true, Ordering::Relaxed) {
-        debug!("Detaching hook from il2cpp_runtime_invoke")?;
-        trampoline.unhook()?;
+        // NOTE: deliberately NOT unhooking. The detour has to stay live to keep null-checking
+        // il2cpp_runtime_invoke; Unity keeps invoking unresolved methods for the whole session.
+        debug!("Scene change seen; running the MelonLoader init pipeline")?;
 
         // The ENTIRE MelonLoader init pipeline runs here rather than during il2cpp_init, where its ~5s
         // main-thread stall delayed Unity's graphics bring-up past the window/focus change and crashed
