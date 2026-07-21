@@ -138,7 +138,17 @@ namespace MelonLoader
 
 #if NET6_0_OR_GREATER
             Fixes.Il2CppInteropFixes.Install();
-            Fixes.Il2CppICallInjector.Install();
+
+            // DISABLED on Unity 6 / Quest: this hooks il2cpp_resolve_icall, and the detour runs managed
+            // code on whatever thread resolves an icall - including Unity worker threads. Unity 6 ships
+            // engine modules whose managed methods are stripped (UnityEngine.AccessibilityModule is the
+            // one that bites here): the original resolve returns null, so the detour falls through to
+            // ShouldInject, finds the matching type in our loaded interop assemblies, and then generates
+            // IL / calls into Il2CppInterop from that worker thread. Result is a SIGSEGV with an empty
+            // managed stacktrace, ~2ms after Unity logs its AccessibilityModule resolution failures,
+            // followed by the DeleteGlobalRef teardown abort. Injected icalls are a mod convenience, not
+            // required for loading, so leave this off until the detour is made thread/runtime safe.
+            //Fixes.Il2CppICallInjector.Install();
 #endif
 
             PatchShield.Install();

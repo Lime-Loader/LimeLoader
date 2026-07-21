@@ -72,19 +72,6 @@ fn detour_inner(
         debug!("Mono thread reset")?;
 
         base_assembly::pre_start()?;
-
-        // DIAGNOSTIC (0.1.15): skip start() - the support module + il2cpp type injection - while still
-        // doing the full ~4.4s init + pre_start block. The remaining crash fires immediately after
-        // start() completes, on a Unity worker thread with an EMPTY managed stacktrace, right as Unity
-        // resolves UnityEngine.AccessibilityModule. This isolates the two candidates: if the game now
-        // survives, the injection/interop startup is the trigger; if it still crashes, the multi-second
-        // main-thread block is. Set back to false for a real build.
-        const SKIP_START: bool = true;
-        if SKIP_START {
-            crate::log!("[DIAG] Skipping start() (support module + injection) - isolating the post-Start crash");
-            return Ok(result);
-        }
-
         base_assembly::start()?;
     }
 
