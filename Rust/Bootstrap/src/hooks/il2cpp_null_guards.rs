@@ -132,35 +132,81 @@ unsafe fn with_writable<R>(addr: usize, len: usize, f: impl FnOnce() -> R) -> Op
     Some(result)
 }
 
+/// `MAP_FIXED_NOREPLACE`: map exactly here, or fail - never silently relocate. Spelled out rather than
+/// taken from libc so the build does not depend on the crate exposing it.
+const MAP_FIXED_NOREPLACE: libc::c_int = 0x10_0000;
+
 /// Allocate an executable page within branch range of `near`, so a single `B` can reach it.
+///
+/// A plain mmap hint is only advisory - under ASLR the kernel happily places the page hundreds of
+/// megabytes away, which is why the first version of this always reported "no stub memory within
+/// branch range". Instead, read the address space, find a real hole near the target, and claim it
+/// with MAP_FIXED_NOREPLACE so we either get that exact address or a clean failure.
 unsafe fn alloc_stub_near(near: usize) -> Option<*mut u32> {
     let page = libc::sysconf(libc::_SC_PAGESIZE) as usize;
 
-    // Walk outwards from the target until a hint lands close enough to be reachable.
-    let mut step = 0usize;
-    while (step as i64) < BRANCH_RANGE {
-        for direction in [1i64, -1] {
-            let hint = (near as i64 + direction * step as i64) as usize & !(page - 1);
-            if hint == 0 {
-                continue;
-            }
-            let p = libc::mmap(
-                hint as *mut c_void,
-                page,
-                libc::PROT_READ | libc::PROT_WRITE | libc::PROT_EXEC,
-                libc::MAP_PRIVATE | libc::MAP_ANONYMOUS,
-                -1,
-                0,
-            );
-            if p != libc::MAP_FAILED {
-                if (p as i64 - near as i64).abs() < BRANCH_RANGE {
-                    return Some(p as *mut u32);
+    // Stay a little inside the +/-128MB limit so the branch is comfortably in range.
+    let reach = (BRANCH_RANGE as usize) - 1024 * 1024;
+    let lo = near.saturating_sub(reach);
+    let hi = near.saturating_add(reach);
+
+    // Existing mappings, sorted; gaps between them are fair game.
+    let mut ranges: Vec<(usize, usize)> = Vec::new();
+    if let Ok(maps) = std::fs::read_to_string("/proc/self/maps") {
+        for line in maps.lines() {
+            if let Some(dash) = line.find('-') {
+                let end_of_range = line.find(' ').unwrap_or(line.len());
+                if let (Ok(s), Ok(e)) = (
+                    usize::from_str_radix(&line[..dash], 16),
+                    usize::from_str_radix(&line[dash + 1..end_of_range], 16),
+                ) {
+                    ranges.push((s, e));
                 }
-                libc::munmap(p, page); // landed too far; keep looking
             }
         }
-        step = if step == 0 { page } else { step * 2 };
     }
+    ranges.sort_unstable();
+
+    // Try holes closest to the target first, working outwards in both directions.
+    let mut candidates: Vec<usize> = Vec::new();
+    for pair in ranges.windows(2) {
+        let gap_start = (pair[0].1 + page - 1) & !(page - 1);
+        let gap_end = pair[1].0;
+        if gap_end <= gap_start || gap_end - gap_start < page {
+            continue;
+        }
+        // Clamp the usable part of this hole to our reachable window.
+        let usable_start = gap_start.max(lo);
+        let usable_end = gap_end.min(hi);
+        if usable_end <= usable_start || usable_end - usable_start < page {
+            continue;
+        }
+        candidates.push(usable_start);
+        let last_page = (usable_end - page) & !(page - 1);
+        if last_page > usable_start {
+            candidates.push(last_page);
+        }
+    }
+    candidates.sort_by_key(|&addr| (addr as i64 - near as i64).abs());
+
+    for addr in candidates {
+        let p = libc::mmap(
+            addr as *mut c_void,
+            page,
+            libc::PROT_READ | libc::PROT_WRITE | libc::PROT_EXEC,
+            libc::MAP_PRIVATE | libc::MAP_ANONYMOUS | MAP_FIXED_NOREPLACE,
+            -1,
+            0,
+        );
+        if p != libc::MAP_FAILED {
+            if p as usize == addr && (p as i64 - near as i64).abs() < BRANCH_RANGE {
+                return Some(p as *mut u32);
+            }
+            // Kernel ignored the flag (older kernel) and relocated us - give it back and continue.
+            libc::munmap(p, page);
+        }
+    }
+
     None
 }
 
@@ -229,7 +275,10 @@ fn guard_export(
         let stub = match unsafe { alloc_stub_near(target) } {
             Some(s) => s,
             None => {
-                log!("[guard] {}: no stub memory within branch range; left unguarded", name);
+                log!(
+                    "[guard] {}: no free page within +/-128MB of {:#x}; left unguarded",
+                    name, target
+                );
                 return Ok(());
             }
         };
@@ -256,8 +305,8 @@ fn guard_export(
 
         match wrote {
             Some(()) => log!(
-                "[guard] {} is a tail-call thunk; redirected 4 bytes to a null-checking stub",
-                name
+                "[guard] {} thunk at {:#x} -> stub {:#x} (impl {:#x}); null check active",
+                name, target, stub as usize, real_impl
             ),
             None => log!("[guard] {}: could not make the page writable; left unguarded", name),
         }
