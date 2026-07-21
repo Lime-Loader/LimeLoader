@@ -222,6 +222,60 @@ unsafe fn write_stub(stub: *mut u32, original_target: usize) -> bool {
 // Fallback path for exports that are real functions rather than 4-byte thunks
 // ---------------------------------------------------------------------------------------------
 
+/// Guard one export using ONLY the 4-byte thunk rewrite, never the Rust inline-hook fallback.
+///
+/// For multi-argument functions the fallback is unusable: its detour is declared as taking a single
+/// argument, so calling the trampoline from Rust would not preserve x1-x7. The generated stub has no
+/// such problem - it only tests x0 and otherwise branches with every register untouched, so it works
+/// for any signature.
+pub fn guard_thunk_only(name: &str) {
+    let runtime = match runtime!() {
+        Ok(r) => r,
+        Err(_) => return,
+    };
+    let target = match runtime.get_export_ptr(name) {
+        Ok(ptr) => ptr as usize,
+        Err(_) => return,
+    };
+    let first = unsafe { (target as *const u32).read() };
+    if !is_uncond_branch(first) {
+        log!("[guard] {} is not a tail-call thunk; left unguarded (cannot wrap safely)", name);
+        return;
+    }
+    let real_impl = branch_target(target, first);
+    let stub = match unsafe { alloc_stub_near(target) } {
+        Some(s) => s,
+        None => {
+            log!("[guard] {}: no free page within +/-128MB of {:#x}; left unguarded", name, target);
+            return;
+        }
+    };
+    if !unsafe { write_stub(stub, real_impl) } {
+        log!("[guard] {}: stub could not reach the implementation; left unguarded", name);
+        return;
+    }
+    let patched = match encode_branch(target, stub as usize) {
+        Some(b) => b,
+        None => {
+            log!("[guard] {}: stub out of branch range; left unguarded", name);
+            return;
+        }
+    };
+    let wrote = unsafe {
+        with_writable(target, 4, || {
+            (target as *mut u32).write(patched);
+            flush_icache(target, 4);
+        })
+    };
+    match wrote {
+        Some(()) => log!(
+            "[guard] {} thunk at {:#x} -> stub {:#x} (impl {:#x}); null check active",
+            name, target, stub as usize, real_impl
+        ),
+        None => log!("[guard] {}: could not make the page writable; left unguarded", name),
+    }
+}
+
 fn guard_export(
     name: &str,
     slot: &RwLock<NativeHook<ParamCountFn>>,

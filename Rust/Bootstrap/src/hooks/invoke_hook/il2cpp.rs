@@ -36,15 +36,10 @@ fn detour_inner(
 ) -> Result<*mut Il2CppObject, DynErr> {
     let trampoline = INVOKE_HOOK.try_read()?;
 
-    // Unity 6 ships engine modules whose managed methods are stripped (AccessibilityModule on Quest).
-    // It looks one up, gets NULL - that is the "Unable to find method ..." spam it logs - and then
-    // invokes it anyway. il2cpp_runtime_invoke dereferences the method immediately (reading flags at
-    // +0x4c), so the process dies with SIGSEGV at fault address 0x4c. Refusing the call is the only
-    // sane response: there is no method to run, so there is no result.
-    //
-    // This is why the hook now stays installed for the lifetime of the process. Once STARTED is set
-    // the detour does nothing but this null check, which is far cheaper than the method-name lookup it
-    // used to perform.
+    // Unity 6 invokes methods it failed to resolve (stripped engine modules), passing NULL. Refuse
+    // those here too - while this detour is installed it sits in front of il2cpp_runtime_invoke, which
+    // would otherwise dereference the method immediately. Once we detach, the native stub installed
+    // below takes over this duty.
     if method.is_null() {
         return Ok(null_mut());
     }
@@ -65,9 +60,15 @@ fn detour_inner(
     // active before Unity's graphics device exists, so by here the XR/Vulkan bring-up is already done -
     // which is exactly what the init pipeline must not interrupt.
     if name.contains("Internal_ActiveSceneChanged") && !STARTED.swap(true, Ordering::Relaxed) {
-        // NOTE: deliberately NOT unhooking. The detour has to stay live to keep null-checking
-        // il2cpp_runtime_invoke; Unity keeps invoking unresolved methods for the whole session.
-        debug!("Scene change seen; running the MelonLoader init pipeline")?;
+        debug!("Detaching hook from il2cpp_runtime_invoke")?;
+        trampoline.unhook()?;
+
+        // Only now is it safe to patch il2cpp_runtime_invoke's thunk: our Dobby detour lived on the
+        // same 4 bytes, so doing this while hooked would have the two fighting over them. The stub
+        // takes over null-checking for the rest of the session, which keeps the detour off the hot
+        // path entirely - leaving it installed instead made the support-module setup abort, since
+        // every nested runtime_invoke re-entered the detour while the pipeline ran inside it.
+        crate::hooks::il2cpp_null_guards::guard_thunk_only("il2cpp_runtime_invoke");
 
         // The ENTIRE MelonLoader init pipeline runs here rather than during il2cpp_init, where its ~5s
         // main-thread stall delayed Unity's graphics bring-up past the window/focus change and crashed
