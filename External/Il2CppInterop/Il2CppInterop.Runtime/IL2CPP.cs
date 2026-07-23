@@ -814,34 +814,6 @@ public static unsafe class IL2CPP
     [DllImport("libil2cpp.so", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
     public static extern IntPtr il2cpp_object_new(IntPtr klass);
 
-    // Direct native-call path for parameterless value-type getters, used by generated interop code
-    // instead of il2cpp_runtime_invoke when the return is a multi-field blittable struct.
-    //
-    // Why: il2cpp_runtime_invoke has the game's il2cpp runtime BOX the return value, and on Android
-    // arm64 that boxing corrupts homogeneous-float aggregates (Vector2/Vector3/Vector4/Quaternion/
-    // Color/...): the value comes back with every component equal to the first, which is why reading
-    // transform.position / localScale / lossyScale through interop yields e.g. (0.045, 0.045, 0.045).
-    // Calling the method's native code pointer directly lets CoreCLR marshal the HFA return per the
-    // arm64 ABI (s0..s3), which is correct. The vanilla game never hits the bug because its own
-    // compiled code calls these getters directly rather than through reflection-style invoke.
-    //
-    // il2cpp's calling convention passes the instance pointer (if any) first and the hidden MethodInfo*
-    // last (confirmed in DelegateSupport/ClassInjector). The generator only routes non-virtual,
-    // parameterless methods returning a >=2-field blittable struct here, so there are no arguments to
-    // marshal and, being plain value getters, no il2cpp exceptions to propagate - the two things
-    // il2cpp_runtime_invoke otherwise handles for us.
-    public static T CallValueTypeGetterInstance<T>(IntPtr methodInfo, IntPtr obj) where T : unmanaged
-    {
-        var methodPointer = UnityVersionHandler.Wrap((Il2CppMethodInfo*)methodInfo).MethodPointer;
-        return ((delegate* unmanaged<IntPtr, IntPtr, T>)methodPointer)(obj, methodInfo);
-    }
-
-    public static T CallValueTypeGetterStatic<T>(IntPtr methodInfo) where T : unmanaged
-    {
-        var methodPointer = UnityVersionHandler.Wrap((Il2CppMethodInfo*)methodInfo).MethodPointer;
-        return ((delegate* unmanaged<IntPtr, T>)methodPointer)(methodInfo);
-    }
-
     [DllImport("libil2cpp.so", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
     public static extern IntPtr il2cpp_object_unbox(IntPtr obj);
 

@@ -34,17 +34,6 @@ public static class Pass50GenerateMethods
                     if (valueTypeLocal.VariableType.FullName != "System.Void")
                         newMethod.CilMethodBody.LocalVariables.Add(valueTypeLocal);
 
-                    // --- Direct native-call path for multi-field blittable value-type getters ---
-                    // il2cpp_runtime_invoke boxes the return value, and on arm64 that boxing corrupts
-                    // homogeneous-float aggregates (Vector2/3/4, Quaternion, Color, ...) so every
-                    // component reads back equal to the first (the transform.position (x,x,x) bug).
-                    // For a parameterless, non-virtual method whose return is such a struct, call the
-                    // native method pointer directly instead - CoreCLR returns the HFA correctly.
-                    // Restricted to >=2-field blittable structs: single value returns don't corrupt, and
-                    // keeping them on runtime_invoke preserves its il2cpp exception handling.
-                    if (TryEmitDirectValueTypeGetter(context, bodyBuilder, methodRewriteContext, typeContext, imports))
-                        continue;
-
                     // Pre-initialize any present params
                     // TODO: This doesn't account for params T[] (i.e. generic element type) yet; may emit incorrect IL
                     // TODO: Do we really need a loop here? C# allows only one params array.
@@ -266,69 +255,5 @@ public static class Pass50GenerateMethods
                 }
             }
         }
-    }
-
-    // Emits a direct native call for parameterless methods returning a multi-field blittable struct,
-    // bypassing il2cpp_runtime_invoke (whose arm64 boxing corrupts HFA returns to (x,x,x)). Returns
-    // true if it emitted the whole body (caller should skip the normal runtime_invoke generation),
-    // false to fall through to the normal path.
-    private static bool TryEmitDirectValueTypeGetter(RewriteGlobalContext context,
-        CilInstructionCollection bodyBuilder, MethodRewriteContext methodRewriteContext,
-        TypeRewriteContext typeContext, RuntimeAssemblyReferences imports)
-    {
-        var originalMethod = methodRewriteContext.OriginalMethod;
-        var newMethod = methodRewriteContext.NewMethod;
-
-        // Parameterless only (no args to marshal), and never for the generic-instantiation store path.
-        if (originalMethod.Parameters.Count != 0 || methodRewriteContext.GenericInstantiationsStoreSelfSubstRef != null)
-            return false;
-
-        // Skip anything that needs virtual dispatch - a direct pointer call would ignore overrides.
-        // (Matches the condition the normal path uses to fetch the virtual method pointer.)
-        if (originalMethod.IsAbstract || (originalMethod.IsVirtual && !originalMethod.DeclaringType!.IsValueType))
-            return false;
-
-        var originalReturnType = originalMethod.Signature!.ReturnType;
-        if (!originalReturnType.IsValueType)
-            return false;
-
-        var returnTypeDef = originalReturnType.Resolve();
-        if (returnTypeDef == null)
-            return false;
-
-        var returnCtx = context.TryGetNewTypeForOriginal(returnTypeDef);
-        if (returnCtx == null || returnCtx.ComputedTypeSpecifics != TypeRewriteContext.TypeSpecifics.BlittableStruct)
-            return false;
-
-        // Only multi-field structs are affected (Vector2/3/4, Quaternion, Color, ...); single-value
-        // returns (primitives via 1 field, enums) don't corrupt, so leave them on the safe path.
-        var instanceFieldCount = 0;
-        foreach (var field in returnTypeDef.Fields)
-            if (!field.IsStatic)
-                instanceFieldCount++;
-        if (instanceFieldCount < 2)
-            return false;
-
-        var convertedReturnType = newMethod.Signature!.ReturnType;
-
-        if (originalMethod.IsStatic)
-        {
-            // T CallValueTypeGetterStatic<T>(IntPtr methodInfo)
-            bodyBuilder.Add(OpCodes.Ldsfld, methodRewriteContext.NonGenericMethodInfoPointerField);
-            bodyBuilder.Add(OpCodes.Call, imports.Module.DefaultImporter.ImportMethod(
-                imports.IL2CPP_CallValueTypeGetterStatic.Value.MakeGenericInstanceMethod(convertedReturnType)));
-        }
-        else
-        {
-            // T CallValueTypeGetterInstance<T>(IntPtr methodInfo, IntPtr obj)
-            bodyBuilder.Add(OpCodes.Ldsfld, methodRewriteContext.NonGenericMethodInfoPointerField);
-            bodyBuilder.EmitObjectToPointer(originalMethod.DeclaringType!.ToTypeSignature(),
-                newMethod.DeclaringType!.ToTypeSignature(), typeContext, 0, true, false, true, true, out _);
-            bodyBuilder.Add(OpCodes.Call, imports.Module.DefaultImporter.ImportMethod(
-                imports.IL2CPP_CallValueTypeGetterInstance.Value.MakeGenericInstanceMethod(convertedReturnType)));
-        }
-
-        bodyBuilder.Add(OpCodes.Ret);
-        return true;
     }
 }
