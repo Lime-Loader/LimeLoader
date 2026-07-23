@@ -46,6 +46,8 @@ public class RuntimeAssemblyReferences
     public Lazy<IMethodDefOrRef> IL2CPP_il2cpp_field_static_get_value { get; private set; }
     public Lazy<IMethodDefOrRef> IL2CPP_il2cpp_field_static_set_value { get; private set; }
     public Lazy<IMethodDefOrRef> IL2CPP_il2cpp_runtime_invoke { get; private set; }
+    public Lazy<IMethodDefOrRef> IL2CPP_CallValueTypeGetterInstance { get; private set; }
+    public Lazy<IMethodDefOrRef> IL2CPP_CallValueTypeGetterStatic { get; private set; }
     public Lazy<IMethodDefOrRef> IL2CPP_il2cpp_runtime_class_init { get; private set; }
     public Lazy<IMethodDefOrRef> IL2CPP_il2cpp_object_unbox { get; private set; }
     public Lazy<IMethodDefOrRef> IL2CPP_il2cpp_value_box { get; private set; }
@@ -341,6 +343,22 @@ public class RuntimeAssemblyReferences
         {
             var mr = ReferenceCreator.CreateStaticMethodReference("il2cpp_runtime_class_init", ResolveType("System.Void"),
                 ResolveType("Il2CppInterop.Runtime.IL2CPP").ToTypeDefOrRef(), ResolveType("System.IntPtr"));
+            return mr;
+        });
+
+        IL2CPP_CallValueTypeGetterInstance = new Lazy<IMethodDefOrRef>(() =>
+        {
+            var gp0 = new GenericParameterSignature(GenericParameterType.Method, 0);
+            var signature = MethodSignature.CreateStatic(gp0, 1, ResolveType("System.IntPtr"), ResolveType("System.IntPtr"));
+            var mr = new MemberReference(ResolveType("Il2CppInterop.Runtime.IL2CPP").ToTypeDefOrRef(), "CallValueTypeGetterInstance", signature);
+            return mr;
+        });
+
+        IL2CPP_CallValueTypeGetterStatic = new Lazy<IMethodDefOrRef>(() =>
+        {
+            var gp0 = new GenericParameterSignature(GenericParameterType.Method, 0);
+            var signature = MethodSignature.CreateStatic(gp0, 1, ResolveType("System.IntPtr"));
+            var mr = new MemberReference(ResolveType("Il2CppInterop.Runtime.IL2CPP").ToTypeDefOrRef(), "CallValueTypeGetterStatic", signature);
             return mr;
         });
 
